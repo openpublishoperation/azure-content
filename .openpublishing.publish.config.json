@@ -39,5 +39,6 @@
       }
     }
   ],
-  "notification_subscribers": ["fenxu@microsoft.com"]
+  "notification_subscribers": ["fenxu@microsoft.com", "OPBuild@microsoft.com"],
+  "branches_to_filter": ["master-sync"]
 }
