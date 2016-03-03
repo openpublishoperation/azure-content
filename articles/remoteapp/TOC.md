@@ -30,7 +30,7 @@
 ## [Create an app image](remoteapp-imageoptions.md)
 ### [App image requirements](remoteapp-appreqs.md)
 ### [What's in the template images?](remoteapp-images.md)
-### [Create an image from a VM](remoteapp-image-on-azure-vm.md)
+### [Create an image from a VM](remoteapp-image-on-azurevm.md)
 ### [Upload your image](remoteapp-uploadimage.md)
 
 ## Create a collection
