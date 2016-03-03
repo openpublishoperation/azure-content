@@ -1,21 +1,21 @@
-<properties
-   pageTitle="Azure AD Connect sync: Prevent accidental deletes | Microsoft Azure"
-   description="This topic describes the prevent accidental deletes (preventing accidental deletions) feature in Azure AD Connect."
-   services="active-directory"
-   documentationCenter=""
-   authors="AndKjell"
-   manager="StevenPo"
-   editor=""/>
+---
+title: 'Azure AD Connect sync: Prevent accidental deletes | Microsoft Azure'
+description: This topic describes the prevent accidental deletes (preventing accidental deletions) feature in Azure AD Connect.
+services: active-directory
+documentationcenter: 
+authors: AndKjell
+manager: StevenPo
+editor: 
 
-<tags
-   ms.service="active-directory"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="identity"
-   ms.date="01/21/2016"
-   ms.author="andkjell"/>
+ms.service: active-directory
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: identity
+ms.date: 01/21/2016
+ms.author: andkjell
 
+---
 # Azure AD Connect sync: Prevent accidental deletes
 This topic describes the prevent accidental deletes (preventing accidental deletions) feature in Azure AD Connect.
 
@@ -23,9 +23,9 @@ When installing Azure AD Connect, prevent accidental deletes will be enabled by 
 
 Common scenarios when you see this include:
 
-- Changes to [filtering](active-directory-aadconnectsync-configure-filtering.md) where an entire [OU](active-directory-aadconnectsync-configure-filtering.md#organizational-unitbased-filtering) or [domain](active-directory-aadconnectsync-configure-filtering.md#domain-based-filtering) is unselected.
-- All objects in an OU are deleted.
-- An OU is renamed so all objects in it are considered to be out of scope for synchronization.
+* Changes to [filtering](active-directory-aadconnectsync-configure-filtering.md) where an entire [OU](active-directory-aadconnectsync-configure-filtering.md#organizational-unitbased-filtering) or [domain](active-directory-aadconnectsync-configure-filtering.md#domain-based-filtering) is unselected.
+* All objects in an OU are deleted.
+* An OU is renamed so all objects in it are considered to be out of scope for synchronization.
 
 The default value of 500 objects can be changed with PowerShell using `Enable-ADSyncExportDeletionThreshold`. You should configure this value to fit your organization’s size. Since the sync scheduler will run every 3 hours, the value is the number of deletes seen within 3 hours.
 
@@ -34,7 +34,8 @@ With this feature enabled, if there are too many deletes staged to be exported t
 ![Prevent Accidental deletes email](./media/active-directory-aadconnectsync-feature-prevent-accidental-deletes/email.png)
 
 > *Hello (technical contact). At (time) the Identity synchronization service detected that the number of deletions exceeded the configured deletion threshold for (organization name). A total of (number) objects were sent for deletion in this Identity synchronization run. This met or exceeded the configured deletion threshold value of (number) objects. We need you to provide confirmation that these deletions should be processed before we will proceed. Please see the preventing accidental deletions for more information about the error listed in this email message.*
-
+> 
+> 
 If this was unexpected, then investigate and take corrective actions. To see which objects are about to be deleted, do the following:
 
 1. Start **Synchronization Service** from the Start Menu.
@@ -56,3 +57,4 @@ If all the deletes are desired, then do the following:
 Learn more about the [Azure AD Connect sync](active-directory-aadconnectsync-whatis.md) configuration.
 
 Learn more about [Integrating your on-premises identities with Azure Active Directory](active-directory-aadconnect.md).
+

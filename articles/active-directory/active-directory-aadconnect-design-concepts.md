@@ -1,21 +1,21 @@
-<properties
-   pageTitle="Azure AD Connect: Design concepts | Microsoft Azure"
-   description="This topic details certain implementation design areas"
-   services="active-directory"
-   documentationCenter=""
-   authors="AndKjell"
-   manager="stevenpo"
-   editor=""/>
+---
+title: 'Azure AD Connect: Design concepts | Microsoft Azure'
+description: This topic details certain implementation design areas
+services: active-directory
+documentationcenter: 
+authors: AndKjell
+manager: stevenpo
+editor: 
 
-<tags
-   ms.service="active-directory"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="Identity"
-   ms.date="02/16/2016"
-   ms.author="andkjell"/>
+ms.service: active-directory
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: Identity
+ms.date: 02/16/2016
+ms.author: andkjell
 
+---
 # Azure AD Connect: Design concepts
 The purpose of this topic is to describe areas which must be thought through during the implementation design of Azure AD Connect. This is a deep dive on certain areas and these concept are briefly described in other topics as well.
 
@@ -26,22 +26,22 @@ The word immutable, i.e. cannot be changed, is important to this topic. Since th
 
 The attribute is used for the following scenarios:
 
-- When a new sync engine server is built, or rebuilt after a disaster recovery scenario, this attribute will link existing objects in Azure AD with objects on-premises.
-- If you move from a cloud-only identity to a synchronized identity model this attribute will allow objects to “hard match” existing objects in Azure AD with on-premises objects.
-- If you use federation, this attribute together with the **userPrincipalName** is used in the claim to uniquely identify a user.
+* When a new sync engine server is built, or rebuilt after a disaster recovery scenario, this attribute will link existing objects in Azure AD with objects on-premises.
+* If you move from a cloud-only identity to a synchronized identity model this attribute will allow objects to “hard match” existing objects in Azure AD with on-premises objects.
+* If you use federation, this attribute together with the **userPrincipalName** is used in the claim to uniquely identify a user.
 
 This topic will only talk about sourceAnchor as it relates to users. The same rules apply to all object types, but it is only for users this usually is a concern.
 
 ### Selecting a good sourceAnchor attribute
 The attribute value must follow the following rules:
 
-- Be less than 60 characters in length
-- Not contain a special character: &#92; ! # $ % & * + / = ? ^ &#96; { } | ~ < > ( ) ' ; : , [ ] " @ _
-- Must be globally unique
-- Must be either a string, integer or binary
-- Should not be based on user's name, these change
-- Should not be case sensitive and avoid values that may vary by case
-- Should be assigned when the object is created.
+* Be less than 60 characters in length
+* Not contain a special character: &#92; ! # $ % & * + / = ? ^ &#96; { } | ~ < > ( ) ' ; : , [ ] ] " @ _
+* Must be globally unique
+* Must be either a string, integer or binary
+* Should not be based on user's name, these change
+* Should not be case sensitive and avoid values that may vary by case
+* Should be assigned when the object is created.
 
 If the selected sourceAnchor is not of type string, Azure AD Connect will Base64Encode the attribute value to ensure no special characters will appear. If you use another federation server than ADFS, make sure your server also has the capability to Base64Encode the attribute.
 
@@ -60,9 +60,10 @@ The sourceAnchor attribute value cannot be changed after the object has been cre
 
 For this reason, the following restrictions apply to Azure AD Connect:
 
-- The sourceAnchor attribute can only be set during initial installation. If you re-run the installation wizard this option is read-only. If you need to change this, then you must uninstall and reinstall.
-- If you install another Azure AD Connect server, then you must select the same sourceAnchor attribute as previously used. If you have earlier been using DirSync and move to Azure AD Connect, then you must use **objectGUID** since that is the attribute used by DirSync.
-- If the value for sourceAnchor is changed after the object has been exported to Azure AD, then Azure AD Connect sync will throw an error and will not allow any more changes on that object before the issue has been fixed and the sourceAnchor is changed back in the source directory.
+* The sourceAnchor attribute can only be set during initial installation. If you re-run the installation wizard this option is read-only. If you need to change this, then you must uninstall and reinstall.
+* If you install another Azure AD Connect server, then you must select the same sourceAnchor attribute as previously used. If you have earlier been using DirSync and move to Azure AD Connect, then you must use **objectGUID** since that is the attribute used by DirSync.
+* If the value for sourceAnchor is changed after the object has been exported to Azure AD, then Azure AD Connect sync will throw an error and will not allow any more changes on that object before the issue has been fixed and the sourceAnchor is changed back in the source directory.
 
 ## Next steps
 Learn more about [Integrating your on-premises identities with Azure Active Directory](active-directory-aadconnect.md).
+

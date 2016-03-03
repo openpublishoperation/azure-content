@@ -1,23 +1,22 @@
-<properties
-	pageTitle="Learn more about Azure AD"
-	description="A learning map for the Azure AD content set."
-	services="active-directory"
-	documentationCenter=""
-	authors="curtand"
-	manager="stevenpo"
-	editor=""/>
+---
+title: Learn more about Azure AD
+description: A learning map for the Azure AD content set.
+services: active-directory
+documentationcenter: 
+authors: curtand
+manager: stevenpo
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="article"
-	ms.date="01/05/2016"
-	ms.author="curtand"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: article
+ms.date: 01/05/2016
+ms.author: curtand
 
+---
 # Learn more about Azure AD
-
 ### Other articles on this topic
 [What is Azure AD?](active-directory-whatis.md)<br>
 [How does it work?](active-directory-works.md)<br>
@@ -35,8 +34,7 @@ You can add your own custom domain name to Azure Active Directory to use it with
 
 To understand usage constraints and other service limits for the Azure Active Directory service, see [Azure AD service limits and restrictions](active-directory-service-limits-restrictions.md)
 
-
 ## Additional Resources
-
 * [Sign up for Azure as an organization](sign-up-organization.md)
 * [Azure Identity](fundamentals-identity.md)
+

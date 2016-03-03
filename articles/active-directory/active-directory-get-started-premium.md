@@ -1,38 +1,36 @@
-<properties
-	pageTitle="Getting started with Azure Active Directory Premium"
-	description="A topic that explains how to sign up for Azure Active Directory Premium edition."
-	services="active-directory"
-	documentationCenter=""
-	authors="markusvi"
-	manager="stevenpo" 
-	editor=""/>
+---
+title: Getting started with Azure Active Directory Premium
+description: A topic that explains how to sign up for Azure Active Directory Premium edition.
+services: active-directory
+documentationcenter: 
+authors: markusvi
+manager: stevenpo
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.workload="infrastructure-services"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="get-started-article"
-	ms.date="01/26/2016"
-	ms.author="markvi"/>
+ms.service: active-directory
+ms.workload: infrastructure-services
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: get-started-article
+ms.date: 01/26/2016
+ms.author: markvi
 
+---
 # Getting started with Azure Active Directory Premium
-
 Azure Active Directory comes in three editions: Free, Basic, and Premium. The Free edition is included with an Azure or Office 365 subscription. The Basic and Premium editions are available through a [Microsoft Enterprise Agreement](https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx) or the [Open Volume License](https://www.microsoft.com/en-us/licensing/licensing-programs/open-license.aspx) program. Azure and Office 365 subscribers can also buy Active Directory Premium online. [Sign in here](https://portal.office.com/Commerce/Catalog.aspx) to buy it.
 
-> [AZURE.NOTE]
-Azure Active Directory Premium and Basic editions are available for customers in China using the worldwide instance of Azure Active Directory. Azure Active Directory Premium and Basic editions are not currently supported in the Microsoft Azure service operated by 21Vianet in China. For more information, contact us at the [Azure Active Directory Forum](https://feedback.azure.com/forums/169401-azure-active-directory/).
-
+> [!NOTE]
+> Azure Active Directory Premium and Basic editions are available for customers in China using the worldwide instance of Azure Active Directory. Azure Active Directory Premium and Basic editions are not currently supported in the Microsoft Azure service operated by 21Vianet in China. For more information, contact us at the [Azure Active Directory Forum](https://feedback.azure.com/forums/169401-azure-active-directory/).
+> 
+> 
 Azure Active Directory Premium is also included in the **Enterprise Mobility Suite**. Enterprise Mobility Suite is a cost effective way for organizations to use Microsoft Intune, Azure Rights Management and the Active Directory Premium services together under one licensing plan. For more information, see the [Enterprise Mobility Suite](https://www.microsoft.com/en-us/server-cloud/enterprise-mobility/overview.aspx) web site.
 
 To start using Azure Active Directory Premium features today, follow the steps below. The same steps apply to the Azure Active Directory Basic edition.
 
 ## Step 1: Sign up for Active Directory Premium
-
 To sign up, see the [Volume Licensing](http://www.microsoft.com/en-us/licensing/how-to-buy/how-to-buy.aspx) web site.
 
 ## Step 2: Activate your license plan
-
 If this is the first time you have purchased a license plan through Microsoft’s Enterprise Volume Licensing program, you will need to first activate your license plan before you can start assigning licenses from within your Azure Active Directory directory. To do this, you must click on either the Sign In or Sign Up link found in the confirmation email (see below) you will receive after your very first license plan purchase has been completed. On any subsequent purchase for this directory the licenses will automatically be activated in the same directory.
 
 ![][1]
@@ -48,7 +46,6 @@ Once you are done with either the sign up process or the sign in process that wa
 ![][3]
 
 ## Step 3: Activate your Azure Active Directory access
-
 Once the licenses are provisioned to your directory you will be receive a Welcome email (see below) that confirms you can start managing your Azure Active Directory Premium or Enterprise Mobility Suite licenses and features. If you have used Microsoft Azure before, you can proceed to http://manage.windowsazure.com to assign the new licenses (see Step 4 below for further instructions). If you are new to Microsoft Azure, selecting the Sign In link on the email, or going to the [Access to Azure Active Directory activation page](https://account.windowsazure.com/signup?offer=MS-AZR-0110P) will take you through a series of steps to help you access your directory through the Azure Management Portal.
 
 ![][4]
@@ -76,7 +73,6 @@ If you attempt to activate your access to Azure Active Directory prior to receiv
 New administrators in your subscription can also activate their access to the Management Portal through this link.
 
 ## Step 4: Assign license to user accounts
-
 Before you can start using the plan you purchased, you’ll need to manually assign licenses to user accounts within your organization so that they can use the rich features provided with Premium. Use the following steps to assign licenses to users so they can use Azure Active Directory Premium features.
 
 To assign licenses to users:
@@ -91,12 +87,11 @@ To assign licenses to users:
 
     ![][11]
 
-## License restrictions
 
+## License restrictions
 Some license plans are subsets or supersets of other license plans. In most cases, a user cannot be assigned a license plan that has already been assigned to them. If it’s your intention to assign a license plan that is a superset, you’ll need to first remove the subset license plan.
 
 ## License requirements
-
 When you assign a license to a user, you can specify a primary usage location in the properties of their account as shown below. If a usage location is not specified, the tenant’s location is automatically assigned to the user.
 
 ![][12]
@@ -104,11 +99,11 @@ When you assign a license to a user, you can specify a primary usage location in
 The availability of services and features for a Microsoft cloud service varies by country or region. A service, such as Voice over Internet Protocol (VoIP), may be available in one country or region, and not available in another. Features within a service can be restricted for legal reasons in certain countries or regions. To see if a service or feature is available with or without restrictions, look for your country or region on the service’s license restrictions site.
 
 ## What's next
-
-- [Add company branding to your Sign In and Access Panel pages](active-directory-add-company-branding.md)
-- [View your access and usage reports](active-directory-view-access-usage-reports.md)
+* [Add company branding to your Sign In and Access Panel pages](active-directory-add-company-branding.md)
+* [View your access and usage reports](active-directory-view-access-usage-reports.md)
 
 <!--Image references-->
+
 [1]: ./media/active-directory-get-started-premium/MOLSEmail.png
 [2]: ./media/active-directory-get-started-premium/MOLSAccountProfile.png
 [3]: ./media/active-directory-get-started-premium/MOLSThankYou.png

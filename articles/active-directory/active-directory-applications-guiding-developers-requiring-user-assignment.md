@@ -1,23 +1,22 @@
-<properties
-	pageTitle="Azure AD and Applications: Requiring User Assignment | Microsoft Azure"
-	description="How to require user assignment for Azure applications."
-	services="active-directory"
-	documentationCenter=""
-	authors="IHenkel"
-	manager="stevenpo"
-	editor=""/>
+---
+title: 'Azure AD and Applications: Requiring User Assignment | Microsoft Azure'
+description: How to require user assignment for Azure applications.
+services: active-directory
+documentationcenter: 
+authors: IHenkel
+manager: stevenpo
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="article"
-	ms.date="10/09/2015"
-	ms.author="inhenk"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: article
+ms.date: 10/09/2015
+ms.author: inhenk
 
+---
 # Azure AD and Applications: Requiring User Assignment
-
 ## Requiring User Assignment
 1. Log in to the Azure portal with an administrator account.
 2. Click on the **All Items** item in the main menu.
@@ -31,4 +30,11 @@
 You will now have to assign users and/or groups to the application. See [Assigning users to an application](active-directory-guiding-developers-assigning-users.md) and [Assigning groups to an application](active-directory-guiding-developers-assigning-groups.md).
 
 ## Next Steps
-[AZURE.INCLUDE [active-directory-applications-guiding-developers-for-lob-applications-toc.md](../../includes/active-directory-applications-guiding-developers-for-lob-applications-toc.md)]
+- [Configuring access rules](active-directory-conditional-access-azuread-connected-apps.md)
+- [Requiring user assignment](active-directory-applications-guiding-developers-requiring-user-assignment.md)
+- [Assigning users to an application](active-directory-applications-guiding-developers-assigning-users.md)
+- [Assigning groups to an application](active-directory-applications-guiding-developers-assigning-groups.md)
+- [Integrating applications with Azure Active Directory](active-directory-integrating-applications.md)
+- [Article Index for Application Management in Azure Active Directory](active-directory-apps-index.md)
+
+

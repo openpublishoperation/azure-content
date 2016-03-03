@@ -1,23 +1,22 @@
-<properties
-	pageTitle="Azure AD Connect: FAQ | Microsoft Azure"
-	description="This page has frequently asked questions about Azure AD Connect."
-	services="active-directory"
-	documentationCenter=""
-	authors="billmath"
-	manager="stevenpo"
-	editor="curtand"/>
+---
+title: 'Azure AD Connect: FAQ | Microsoft Azure'
+description: This page has frequently asked questions about Azure AD Connect.
+services: active-directory
+documentationcenter: 
+authors: billmath
+manager: stevenpo
+editor: curtand
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="article"
-	ms.date="02/29/2016"
-	ms.author="billmath"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: article
+ms.date: 02/29/2016
+ms.author: billmath
 
+---
 # Azure AD Connect FAQ
-
 ## General installation
 **Q: Will installation work if the Azure AD Global Admin has 2FA enabled?**  
 With the builds from February 2016, this is supported.
@@ -53,8 +52,8 @@ No. Changing the server name will cause the sync engine to not be able to connec
 **Q: The UPN (userPrincipalName) attribute in Azure AD does not match the on-prem UPN - why?**  
 See these articles:
 
-- [User names in Office 365, Azure, or Intune don't match the on-premises UPN or alternate login ID](https://support.microsoft.com/en-us/kb/2523192)
-- [Changes aren't synced by the Azure Active Directory Sync tool after you change the UPN of a user account to use a different federated domain](https://support.microsoft.com/en-us/kb/2669550)
+* [User names in Office 365, Azure, or Intune don't match the on-premises UPN or alternate login ID](https://support.microsoft.com/en-us/kb/2523192)
+* [Changes aren't synced by the Azure Active Directory Sync tool after you change the UPN of a user account to use a different federated domain](https://support.microsoft.com/en-us/kb/2669550)
 
 ## Custom configuration
 **Q: Where are the PowerShell cmdlets for Azure AD Connect documented?**  
@@ -66,14 +65,15 @@ No. This option will not retrieve all configuration settings and should not be u
 ## Troubleshooting
 **Q: How can I get help with Azure AD Connect?**
 
-[Search the Microsoft Knowledge Base (KB)](https://www.microsoft.com/en-us/Search/result.aspx?q=azure%20active%20directory%20connect&form=mssupport)
+[Search the Microsoft Knowledge Base (KB)](https://www.microsoft.com/en-us/Search/result.aspx?q=azure%20active%20directory%20connectform=mssupport)
 
-- Search the Microsoft Knowledge Base (KB) for technical solutions to common break-fix issues about Support for Azure AD Connect.
+* Search the Microsoft Knowledge Base (KB) for technical solutions to common break-fix issues about Support for Azure AD Connect.
 
 [Microsoft Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/azure/en-US/home?forum=WindowsAzureAD)
 
-- You can search and browse for technical questions and answers from the community or ask your own question by clicking [here](https://social.msdn.microsoft.com/Forums/azure/en-US/newthread?category=windowsazureplatform&forum=WindowsAzureAD&prof=required).
+* You can search and browse for technical questions and answers from the community or ask your own question by clicking [here](https://social.msdn.microsoft.com/Forums/azure/en-US/newthread?category=windowsazureplatformforum=WindowsAzureADprof=required).
 
 [Azure AD Connect customer support](https://manage.windowsazure.com/?getsupport=true)
 
-- Use this link to get support through the Azure portal.
+* Use this link to get support through the Azure portal.
+

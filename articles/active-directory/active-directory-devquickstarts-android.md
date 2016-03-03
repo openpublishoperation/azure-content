@@ -1,39 +1,44 @@
-<properties
-	pageTitle="Azure AD Android Getting Started | Microsoft Azure"
-	description="How to build an Android application that integrates with Azure AD for sign in and calls Azure AD protected APIs using OAuth."
-	services="active-directory"
-	documentationCenter="android"
-	authors="brandwe"
-	manager="mbaldwin"
-	editor=""/>
+---
+title: Azure AD Android Getting Started | Microsoft Azure
+description: How to build an Android application that integrates with Azure AD for sign in and calls Azure AD protected APIs using OAuth.
+services: active-directory
+documentationcenter: android
+authors: brandwe
+manager: mbaldwin
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="mobile-android"
-	ms.devlang="java"
-	ms.topic="article"
-	ms.date="01/21/2016"
-	ms.author="brandwe"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: mobile-android
+ms.devlang: java
+ms.topic: article
+ms.date: 01/21/2016
+ms.author: brandwe
 
+---
 # Integrate Azure AD into an Android App
+> [AZURE.SELECTOR]
+- [iOS](active-directory-devquickstarts-ios.md)
+- [Android](active-directory-devquickstarts-android.md)
+- [.NET](active-directory-devquickstarts-dotnet.md)
+- [Windows Phone](active-directory-devquickstarts-windowsphone.md)
+- [Windows Store](active-directory-devquickstarts-windowsstore.md)
+- [Xamarin](active-directory-devquickstarts-xamarin.md)
+- [Cordova](active-directory-devquickstarts-cordova.md)
 
-[AZURE.INCLUDE [active-directory-devquickstarts-switcher](../../includes/active-directory-devquickstarts-switcher.md)]
-
-[AZURE.INCLUDE [active-directory-devguide](../../includes/active-directory-devguide.md)]
+> This article is part of the [Azure Active Directory Developer's Guide](../articles/active-directory/active-directory-developers-guide.md).
 
 If you're developing a desktop application, Azure AD makes it simple and straightforward for you to authenticate your users with their Active Directory accounts.  It also enables your application to securely consume any web API protected by Azure AD, such as the Office 365 APIs or the Azure API.
 
 For Android clients that need to access protected resources, Azure AD provides the Active Directory Authentication Library, or ADAL.  ADAL’s sole purpose in life is to make it easy for your app to get access tokens.  To demonstrate just how easy it is, here we’ll build an Android To-Do List application that:
 
--	Gets access tokens for calling a To-Do List API using the [OAuth 2.0 authentication protocol](https://msdn.microsoft.com/library/azure/dn645545.aspx).
--	Gets a user's To-Do List
--	Signs users out.
+* Gets access tokens for calling a To-Do List API using the [OAuth 2.0 authentication protocol](https://msdn.microsoft.com/library/azure/dn645545.aspx).
+* Gets a user's To-Do List
+* Signs users out.
 
 To get started, you'll need an Azure AD tenant in which you can create users and register an application.  If you don't already have a tenant, [learn how to get one](active-directory-howto-tenant.md).
 
 ## Step 1: Download and run the Node.js REST API TODO Sample Server
-
 This sample is written specifically to work against our existing sample for building a single tenant To-Do REST API for Microsoft Azure Active Directory. This is a pre-requisite for the Quick Start.
 
 For information on how to set this up, visit our existing samples here:
@@ -41,7 +46,6 @@ For information on how to set this up, visit our existing samples here:
 * [Microsoft Azure Active Directory Sample REST API Service for Node.js](active-directory-devquickstarts-webapi-nodejs.md)
 
 ## Step 2: Register your Web API with your Microsoft Azure AD Tenant
-
 **What am I doing?**
 
 *Microsoft Active Directory supports adding two types of applications. Web APIs that offer services to users and applications (either on the web or an applicaiton running on a device) that access those Web APIs. In this step you are registering the Web API you are running locally for testing this sample. Normally this Web API would be a REST service that is offering functionaltiy you want an app to access. Microsoft Azure Active Directory can protect any endpoint!*
@@ -63,7 +67,6 @@ Steps to register a Web API with Microsoft Azure AD
 11. **Find the Client ID value and copy it aside**, you will need this later when configuring your application.
 
 ## Step 3: Register the sample Android Native Client application
-
 Registering your web application is the first step. Next, you'll need to tell Azure Active Directory about your application as well. This allows your application to communicate with the just registered Web API
 
 **What am I doing?**  
@@ -88,45 +91,40 @@ Registering your web application is the first step. Next, you'll need to tell Az
 10. Find the Client ID value and copy it aside, you will need this later when configuring your application.
 11. In "Permissions to Other Applications", click "Add Application."  Select "Other" in the "Show" dropdown, and click the upper check mark.  Locate & click on the TodoListService, and click the bottom check mark to add the application.  Select "Access TodoListService" from the "Delegated Permissions" dropdown, and save the configuration.
 
-
-
 To build with Maven, you can use the pom.xml at top level
 
-  * Clone this repo in to a directory of your choice:
+* Clone this repo in to a directory of your choice:
 
   `$ git clone git@github.com:AzureADSamples/NativeClient-Android.git`  
 
-  * Follow the steps at [Prerequests section to setup your maven for android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android/wiki/Setting-up-maven-environment-for-Android)
-  * Setup emulator with SDK 19
-  * Go to the root folder where you cloned the repo
-  * Run the command: mvn clean install
-  * Change the directory to the Quick Start sample: cd samples\hello
-  * Run the command: mvn android:deploy android:run
-  * You should see app launching
-  * Enter test user credentials to try!
+* Follow the steps at [Prerequests section to setup your maven for android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android/wiki/Setting-up-maven-environment-for-Android)
+
+* Setup emulator with SDK 19
+* Go to the root folder where you cloned the repo
+* Run the command: mvn clean install
+* Change the directory to the Quick Start sample: cd samples\hello
+* Run the command: mvn android:deploy android:run
+* You should see app launching
+* Enter test user credentials to try!
 
 Jar packages will be also submitted beside the aar package.
 
 ### Step 4: Download the Android ADAL and add it to your Eclipse Workspace
-
 We've made it easy for you to have multiple options to use this library in your Android project:
 
 * You can use the source code to import this library into Eclipse and link to your application.
 * If using Android Studio, you can use *aar* package format and reference the binaries.
 
-####Option 1: Source Zip
-
+#### Option 1: Source Zip
 To download a copy of the source code, click "Download ZIP" on the right side of the page or click [here](https://github.com/AzureAD/azure-activedirectory-library-for-android/archive/v1.0.9.tar.gz).
 
-####Option 2: Source via Git
-
+#### Option 2: Source via Git
 To get the source code of the SDK via git just type:
 
     git clone git@github.com:AzureAD/azure-activedirectory-library-for-android.git
     cd ./azure-activedirectory-library-for-android/src
 
-####Option 3: Binaries via Gradle
-
+#### Option 3: Binaries via Gradle
 You can get the binaries from Maven central repo. AAR package can be included as follows in your project in AndroidStudio:
 
 ```gradle
@@ -147,8 +145,7 @@ dependencies {
 }
 ```
 
-####Option 4: aar via Maven
-
+#### Option 4: aar via Maven
 If you are using the m2e plugin in Eclipse, you can specify the dependency in your pom.xml file:
 
 ```xml
@@ -161,106 +158,102 @@ If you are using the m2e plugin in Eclipse, you can specify the dependency in yo
 ```
 
 
-####Option 5: jar package inside libs folder
+#### Option 5: jar package inside libs folder
 You can get the jar file from maven the repo and drop into the *libs* folder in your project. You need to copy the required resources to your project as well since the jar packages don't include them.
 
-
 ### Step 5: Add references to Android ADAL to your project
+1. Add a reference to your project and specify it as an Android library. If you are uncertain how to do this, [click here for more information](http://developer.android.com/tools/projects/projects-eclipse.html)
 
+2. Add the project dependency for debugging in to your project settings
 
-2. Add a reference to your project and specify it as an Android library. If you are uncertain how to do this, [click here for more information] (http://developer.android.com/tools/projects/projects-eclipse.html)
-
-3. Add the project dependency for debugging in to your project settings
-
-4. Update your project's AndroidManifest.xml file to include:
+3. Update your project's AndroidManifest.xml file to include:
 
     ```Java
-      <uses-permission android:name="android.permission.INTERNET" />
-      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-      <application
-            android:allowBackup="true"
-            android:debuggable="true"
-            android:icon="@drawable/ic_launcher"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme" >
+   <uses-permission android:name="android.permission.INTERNET" />
+   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   <application
+         android:allowBackup="true"
+         android:debuggable="true"
+         android:icon="@drawable/ic_launcher"
+         android:label="@string/app_name"
+         android:theme="@style/AppTheme" >
 
-            <activity
-                android:name="com.microsoft.aad.adal.AuthenticationActivity"
-                android:label="@string/title_login_hello_app" >
-            </activity>
-      ....
-      <application/>
-    ```
-
-7. Create an instance of AuthenticationContext at your main Activity. The details of this call are beyond the scope of this README, but you can get a good start by looking at the [Android Native Client Sample](https://github.com/AzureADSamples/NativeClient-Android). Below is an example:
-
-    ```Java
-    // Authority is in the form of https://login.windows.net/yourtenant.onmicrosoft.com
-    mContext = new AuthenticationContext(MainActivity.this, authority, true); // This will use SharedPreferences as            default cache
-    ```
-  * NOTE: mContext is a field in your activity
-
-8. Copy this code block to handle the end of AuthenticationActivity after user enters credentials and receives authorization code:
+         <activity
+             android:name="com.microsoft.aad.adal.AuthenticationActivity"
+             android:label="@string/title_login_hello_app" >
+         </activity>
+   ....
+   <application/>
+ ```
+4. Create an instance of AuthenticationContext at your main Activity. The details of this call are beyond the scope of this README, but you can get a good start by looking at the [Android Native Client Sample](https://github.com/AzureADSamples/NativeClient-Android). Below is an example:
 
     ```Java
-     @Override
-     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-         super.onActivityResult(requestCode, resultCode, data);
-         if (mContext != null) {
-             mContext.onActivityResult(requestCode, resultCode, data);
+ // Authority is in the form of https://login.windows.net/yourtenant.onmicrosoft.com
+ mContext = new AuthenticationContext(MainActivity.this, authority, true); // This will use SharedPreferences as            default cache
+ ```
+   * NOTE: mContext is a field in your activity
+
+5. Copy this code block to handle the end of AuthenticationActivity after user enters credentials and receives authorization code:
+
+    ```Java
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+      super.onActivityResult(requestCode, resultCode, data);
+      if (mContext != null) {
+          mContext.onActivityResult(requestCode, resultCode, data);
+      }
+  }
+ ```
+6. To ask for a token, you define a callback
+
+    ```Java
+ private AuthenticationCallback<AuthenticationResult> callback = new AuthenticationCallback<AuthenticationResult>() {
+
+         @Override
+         public void onError(Exception exc) {
+             if (exc instanceof AuthenticationException) {
+                 textViewStatus.setText("Cancelled");
+                 Log.d(TAG, "Cancelled");
+             } else {
+                 textViewStatus.setText("Authentication error:" + exc.getMessage());
+                 Log.d(TAG, "Authentication error:" + exc.getMessage());
+             }
          }
-     }
-    ```
 
-9. To ask for a token, you define a callback
+         @Override
+         public void onSuccess(AuthenticationResult result) {
+             mResult = result;
 
-    ```Java
-    private AuthenticationCallback<AuthenticationResult> callback = new AuthenticationCallback<AuthenticationResult>() {
+             if (result == null || result.getAccessToken() == null
+                     || result.getAccessToken().isEmpty()) {
+                 textViewStatus.setText("Token is empty");
+                 Log.d(TAG, "Token is empty");
+             } else {
+                 // request is successful
+                 Log.d(TAG, "Status:" + result.getStatus() + " Expired:"
+                         + result.getExpiresOn().toString());
+                 textViewStatus.setText(PASSED);
+             }
+         }
+     };
+ ```7. Finally, ask for a token using that callback:
 
-            @Override
-            public void onError(Exception exc) {
-                if (exc instanceof AuthenticationException) {
-                    textViewStatus.setText("Cancelled");
-                    Log.d(TAG, "Cancelled");
-                } else {
-                    textViewStatus.setText("Authentication error:" + exc.getMessage());
-                    Log.d(TAG, "Authentication error:" + exc.getMessage());
-                }
-            }
+   ```Java
+ mContext.acquireToken(MainActivity.this, resource, clientId, redirect, user_loginhint, PromptBehavior.Auto, "",
+                callback);
+```
 
-            @Override
-            public void onSuccess(AuthenticationResult result) {
-                mResult = result;
-
-                if (result == null || result.getAccessToken() == null
-                        || result.getAccessToken().isEmpty()) {
-                    textViewStatus.setText("Token is empty");
-                    Log.d(TAG, "Token is empty");
-                } else {
-                    // request is successful
-                    Log.d(TAG, "Status:" + result.getStatus() + " Expired:"
-                            + result.getExpiresOn().toString());
-                    textViewStatus.setText(PASSED);
-                }
-            }
-        };
-    ```
-10. Finally, ask for a token using that callback:
-
-    ```Java
-     mContext.acquireToken(MainActivity.this, resource, clientId, redirect, user_loginhint, PromptBehavior.Auto, "",
-                    callback);
-    ```
 
 Explanation of the parameters:
 
-  * Resource is required and is the resource you are trying to access.
-  * Clientid is required and comes from the AzureAD Portal.
-  * You can setup redirectUri as your packagename. It is not required to be provided for the acquireToken call.
-  * PromptBehavior helps to ask for credentials to skip cache and cookie.
-  * Callback will be called after authorization code is exchanged for a token.
+* Resource is required and is the resource you are trying to access.
+* Clientid is required and comes from the AzureAD Portal.
+* You can setup redirectUri as your packagename. It is not required to be provided for the acquireToken call.
+* PromptBehavior helps to ask for credentials to skip cache and cookie.
+* Callback will be called after authorization code is exchanged for a token.
 
   The Callback will have an object of AuthenticationResult which has accesstoken, date expired, and idtoken info.
+
 
 Optional:  **acquireTokenSilent**
 
@@ -270,64 +263,59 @@ You can call **acquireTokenSilent** to handle caching, and token refresh. It pro
      mContext.acquireTokenSilent(resource, clientid, userId, callback );
     ```
 
-11. **Broker**:
-  Microsoft Intune's Company portal app will provide the broker component. Adal will use the broker account, if there is one user account is created at this authenticator and Developer choose not to skip it. Developer can skip the broker user with:
+1. **Broker**:
+Microsoft Intune's Company portal app will provide the broker component. Adal will use the broker account, if there is one user account is created at this authenticator and Developer choose not to skip it. Developer can skip the broker user with:
 
-    ```java
-     AuthenticationSettings.Instance.setSkipBroker(true);
-    ```
+   ```java
+ AuthenticationSettings.Instance.setSkipBroker(true);
+```
 
- Developer needs to register special redirectUri for broker usage. RedirectUri is in the format of msauth://packagename/Base64UrlencodedSignature. You can get your redirecturi for your app using the script "brokerRedirectPrint.ps1" or use API call mContext.getBrokerRedirectUri. Signature is related to your signing certificates.
+   Developer needs to register special redirectUri for broker usage. RedirectUri is in the format of msauth://packagename/Base64UrlencodedSignature. You can get your redirecturi for your app using the script "brokerRedirectPrint.ps1" or use API call mContext.getBrokerRedirectUri. Signature is related to your signing certificates.
 
- Current broker model is for one user. AuthenticationContext provides API method to get the broker user.
+   Current broker model is for one user. AuthenticationContext provides API method to get the broker user.
 
- ```java
- String brokerAccount =  mContext.getBrokerUser();
- ```
- Broker user will be returned if account is valid.
+   ```java
+String brokerAccount =  mContext.getBrokerUser();
+```
+   Broker user will be returned if account is valid.
 
- Your app manifest should have permissions to use AccountManager accounts: http://developer.android.com/reference/android/accounts/AccountManager.html
+   Your app manifest should have permissions to use AccountManager accounts: http://developer.android.com/reference/android/accounts/AccountManager.html
 
- * GET_ACCOUNTS
- * USE_CREDENTIALS
- * MANAGE_ACCOUNTS
+   * GET_ACCOUNTS
+* USE_CREDENTIALS
+* MANAGE_ACCOUNTS
 
 
 Using this walkthrough, you should have what you need to successfully integrate with Azure Active Directory. For more examples of this working, viist the AzureADSamples/ repository on GitHub.
 
 ## Important Information
-
 ### Customization
-
 Library project resources can be overwritten by your application resources. This happens when your app is building. For this reason, you can customize Authentication Activity layout the way you want. You need to make sure to keep the id of the controls that ADAL uses(Webview).
 
 ### Broker
-
 Broker component will be delivered with Microsoft Intune's Company portal app. Account will be created in Account Manager. Account type is "com.microsoft.workaccount". It only allows single SSO account. It will create SSO cookie for this user after completing device challange for one of the apps.
 
 ### Authority Url and ADFS
-
 ADFS is not recognized as production STS, so you need to turn of instance discovery and pass false at AuthenticationContext constructor.
 
 Authority url needs STS instance and tenant name: https://login.windows.net/yourtenant.onmicrosoft.com
 
 ### Querying cache items
-
 ADAL provides Default cache in SharedPrefrecens with some simple cache query fucntions. You can get the current cache from AuthenticationContext with:
+
 ```Java
  ITokenCacheStore cache = mContext.getCache();
 ```
 You can also provide your cache implementation, if you want to customize it.
+
 ```Java
 mContext = new AuthenticationContext(MainActivity.this, authority, true, yourCache);
 ```
 
 ### PromptBehavior
-
 ADAL provides option to specifiy prompt behavior. PromptBehavior.Auto will pop up UI if refresh token is invalid and user credentials are required. PromptBehavior.Always will skip the cache usage and always show UI.
 
 ### Silent token request from cache and refresh
-
 This method does not use UI pop up and not require an activity. It will return token from cache if available. If token is expired, it will try to refresh it. If refresh token is expired or failed, it will return AuthenticationException.
 
     ```Java
@@ -337,23 +325,19 @@ This method does not use UI pop up and not require an activity. It will return t
 You can also make sync call with this method. You can set null to callback or use acquireTokenSilentSync.
 
 ### Diagnostics
-
 The following are the primary sources of information for diagnosing issues:
 
-+ Exceptions
-+ Logs
-+ Network traces
+* Exceptions
+* Logs
+* Network traces
 
 Also, note that correlation IDs are central to the diagnostics in the library. You can set your correlation IDs on a per request basis if you want to correlate an ADAL request with other operations in your code. If you don't set a correlations id then ADAL will generate a random one and all log messages and network calls will be stamped with the correlation id. The self generated id changes on each request.
 
 #### Exceptions
-
 This is obviously the first diagnostic. We try to provide helpful error messages. If you find one that is not helpful please file an issue and let us know. Please also provide device information such as model and SDK#.
 
 #### Logs
-
 You can configure the library to generate log messages that you can use to help diagnose issues. You configure logging by making the following call to configure a callback that ADAL will use to hand off each log message as it is generated.
-
 
  ```Java
  Logger.getInstance().setExternalLogger(new ILogger() {
@@ -380,13 +364,13 @@ private syncronized void writeToLogFile(Context ctx, String msg) {
 ```
 
 ##### Logging Levels
-
-+ Error(Exceptions)
-+ Warn(Warning)
-+ Info(Information purposes)
-+ Verbose(More details)
+* Error(Exceptions)
+* Warn(Warning)
+* Info(Information purposes)
+* Verbose(More details)
 
 You set the log level like this:
+
 ```Java
 Logger.getInstance().setLogLevel(Logger.LogLevel.Verbose);
  ```
@@ -400,29 +384,25 @@ Logger.getInstance().setLogLevel(Logger.LogLevel.Verbose);
  More examples about adb cmds: https://developer.android.com/tools/debugging/debugging-log.html#startingLogcat
 
 #### Network Traces
-
 You can use various tools to capture the HTTP traffic that ADAL generates.  This is most useful if you are familiar with the OAuth protocol or if you need to provide diagnostic information to Microsoft or other support channels.
 
 Fiddler is the easiest HTTP tracing tool.  Use the following links to setup it up to correctly record ADAL network traffic.  In order to be useful it is necessary to configure fiddler, or any other tool such as Charles, to record unencrypted SSL traffic.  NOTE: Traces generated in this way may contain highly privileged information such as access tokens, usernames and passwords.  If you are using production accounts, do not share these traces with 3rd parties.  If you need to supply a trace to someone in order to get support, reproduce the issue with a temporary account with usernames and passwords that you don't mind sharing.
 
-+ [Setting Up Fiddler For Android](http://docs.telerik.com/fiddler/configure-fiddler/tasks/ConfigureForAndroid)
-+ [Configure Fiddler Rules For ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/How-to-listen-to-httpUrlConnection-in-Android-app-from-Fiddler)
-
+* [Setting Up Fiddler For Android](http://docs.telerik.com/fiddler/configure-fiddler/tasks/ConfigureForAndroid)
+* [Configure Fiddler Rules For ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/How-to-listen-to-httpUrlConnection-in-Android-app-from-Fiddler)
 
 ### Dialog mode
 acquireToken method without activity supports dialog prompt.
 
 ### Encryption
-
 ADAL encrypts the tokens and store in SharedPreferences by default. You can look at the StorageHelper class to see the details. Android introduced AndroidKeyStore for 4.3(API18) secure storage of private keys. ADAL uses that for API18 and above. If you want to use ADAL for lower SDK versions, you need to provide secret key at AuthenticationSettings.INSTANCE.setSecretKey
 
 ### Oauth2 Bearer challange
-
 AuthenticationParameters class provides functionality to get the authorization_uri from Oauth2 bearer challange.
 
 ### Session cookies in Webview
-
 Android webview does not clear session cookies after app is closed. You can handle this with sample code below:
+
 ```java
 CookieSyncManager.createInstance(getApplicationContext());
 CookieManager cookieManager = CookieManager.getInstance();
@@ -432,7 +412,6 @@ CookieSyncManager.getInstance().sync();
 More about cookies: http://developer.android.com/reference/android/webkit/CookieSyncManager.html
 
 ### Resource Overrides
-
 The ADAL library includes English strings for the following two ProgressDialog messages.
 
 Your application should overwrite them if localized strings are desired.
@@ -452,4 +431,10 @@ Your application should overwrite them if localized strings are desired.
 ### NTLM dialog
 Adal version 1.1.0 supports NTLM dialog that is processed through onReceivedHttpAuthRequest event from WebViewClient. Dialog layout and strings can be customized.### Step 5: Download the iOS Native Client Sample code
 
-[AZURE.INCLUDE [active-directory-devquickstarts-additional-resources](../../includes/active-directory-devquickstarts-additional-resources.md)]
+## Additional Resources
+
+- [The Azure AD Developer's Guide](active-directory-developers-guide.md)
+- [AzureADSamples on GitHub](https://github.com/AzureAdSamples)
+- [CloudIdentity.com](https://cloudidentity.com)
+
+

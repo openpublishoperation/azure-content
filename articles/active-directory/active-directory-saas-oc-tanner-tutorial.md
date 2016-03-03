@@ -1,56 +1,51 @@
-<properties
-	pageTitle="Tutorial: Azure Active Directory integration with O.C. Tanner - AppreciateHub | Microsoft Azure"
-	description="Learn how to configure single sign-on between Azure Active Directory and O.C. Tanner - AppreciateHub."
-	services="active-directory"
-	documentationCenter=""
-	authors="jeevansd"
-	manager="stevenpo"
-	editor=""/>
+---
+title: 'Tutorial: Azure Active Directory integration with O.C. Tanner - AppreciateHub | Microsoft Azure'
+description: Learn how to configure single sign-on between Azure Active Directory and O.C. Tanner - AppreciateHub.
+services: active-directory
+documentationcenter: 
+authors: jeevansd
+manager: stevenpo
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="article"
-	ms.date="02/29/2016"
-	ms.author="jeedes"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: article
+ms.date: 02/29/2016
+ms.author: jeedes
 
-
+---
 # Tutorial: Azure Active Directory integration with O.C. Tanner - AppreciateHub
-
 The objective of this tutorial is to show you how to integrate O.C. Tanner - AppreciateHub with Azure Active Directory (Azure AD).<br>Integrating O.C. Tanner - AppreciateHub with Azure AD provides you with the following benefits: 
 
-- You can control in Azure AD who has access to O.C. Tanner - AppreciateHub 
-- You can enable your users to automatically get signed-on to O.C. Tanner - AppreciateHub (Single Sign-On) with their Azure AD accounts
-- You can manage your accounts in one central location - the Azure classic portal
+* You can control in Azure AD who has access to O.C. Tanner - AppreciateHub 
+* You can enable your users to automatically get signed-on to O.C. Tanner - AppreciateHub (Single Sign-On) with their Azure AD accounts
+* You can manage your accounts in one central location - the Azure classic portal
 
 If you want to know more details about SaaS app integration with Azure AD, see [What is application access and single sign-on with Azure Active Directory](active-directory-appssoaccess-whatis.md).
 
-## Prerequisites 
-
+## Prerequisites
 To configure Azure AD integration with O.C. Tanner - AppreciateHub, you need the following items:
 
-- An Azure AD subscription
-- A O.C. Tanner - AppreciateHub single-sign on enabled subscription
+* An Azure AD subscription
+* A O.C. Tanner - AppreciateHub single-sign on enabled subscription
 
-
-> [AZURE.NOTE] To test the steps in this tutorial, we do not recommend using a production environment.
-
-
+> [!NOTE]
+> To test the steps in this tutorial, we do not recommend using a production environment.
+> 
+> 
 To test the steps in this tutorial, you should follow these recommendations:
 
-- You should not use your production environment, unless this is necessary.
-- If you don't have an Azure AD trial environment, you can get a one-month trial [here](https://azure.microsoft.com/pricing/free-trial/). 
+* You should not use your production environment, unless this is necessary.
+* If you don't have an Azure AD trial environment, you can get a one-month trial [here](https://azure.microsoft.com/pricing/free-trial/). 
 
- 
 ## Scenario Description
 The objective of this tutorial is to enable you to test Azure AD single sign-on in a test environment. <br>
 The scenario outlined in this tutorial consists of three main building blocks:
 
 1. Adding O.C. Tanner - AppreciateHub from the gallery 
 2. Configuring and testing Azure AD single sign-on
-
 
 ## Adding O.C. Tanner - AppreciateHub from the gallery
 To configure the integration of O.C. Tanner - AppreciateHub into Azure AD, you need to add O.C. Tanner - AppreciateHub from the gallery to your list of managed SaaS apps.
@@ -78,24 +73,21 @@ To configure the integration of O.C. Tanner - AppreciateHub into Azure AD, you n
 <br><br> ![Applications][25] <br>
 
 
-
-
-##  Configuring and testing Azure AD single sign-on
+## Configuring and testing Azure AD single sign-on
 The objective of this section is to show you how to configure and test Azure AD single sign-on with O.C. Tanner - AppreciateHub based on a test user called "Britta Simon".
 
 For single sign-on to work, Azure AD needs to know what the counterpart user in O.C. Tanner - AppreciateHub to an user in Azure AD is. In other words, a link relationship between an Azure AD user and the related user in O.C. Tanner - AppreciateHub needs to be established.<br>
 This link relationship is established by assigning the value of the **user name** in Azure AD as the value of the **Username** in O.C. Tanner - AppreciateHub.
- 
+
 To configure and test Azure AD single sign-on with O.C. Tanner - AppreciateHub, you need to complete the following building blocks:
 
-1. **[Configuring Azure AD Single Sign-On](#configuring-azure-ad-single-single-sign-on)** - to enable your users to use this feature.
-2. **[Creating an Azure AD test user](#creating-an-azure-ad-test-user)** - to test Azure AD single sign-on with Britta Simon.
-4. **[Creating a O.C. Tanner - AppreciateHub test user](#creating-a-halogen-software-test-user)** - to have a counterpart of Britta Simon in O.C. Tanner - AppreciateHub that is linked to the Azure AD representation of her.
-5. **[Assigning the Azure AD test user](#assigning-the-azure-ad-test-user)** - to enable Britta Simon to use Azure AD single sign-on.
-5. **[Testing Single Sign-On](#testing-single-sign-on)** - to verify whether the configuration works.
+1. **[Configuring Azure AD Single Sign-On](#configuring-azure-ad-single-single-sign-on.md)** - to enable your users to use this feature.
+2. **[Creating an Azure AD test user](#creating-an-azure-ad-test-user.md)** - to test Azure AD single sign-on with Britta Simon.
+3. **[Creating a O.C. Tanner - AppreciateHub test user](#creating-a-halogen-software-test-user.md)** - to have a counterpart of Britta Simon in O.C. Tanner - AppreciateHub that is linked to the Azure AD representation of her.
+4. **[Assigning the Azure AD test user](#assigning-the-azure-ad-test-user.md)** - to enable Britta Simon to use Azure AD single sign-on.
+5. **[Testing Single Sign-On](#testing-single-sign-on.md)** - to verify whether the configuration works.
 
 ### Configuring Azure AD Single Sign-On
-
 The objective of this section is to enable Azure AD single sign-on in the Azure classic portal and to configure single sign-on in your O.C. Tanner - AppreciateHub application.<br>
 
 **To configure Azure AD single sign-on with O.C. Tanner - AppreciateHub, perform the following steps:**
@@ -108,30 +100,30 @@ The objective of this section is to enable Azure AD single sign-on in the Azure 
 
 3. On the **Configure App Settings** dialog page, perform the following steps:
 <br><br>![Configure App Settings][8]
- 
+
      a. Open the metadata file using the following link: [https://fed.appreciatehub.com/fed/sp/metadata](https://fed.appreciatehub.com/fed/sp/metadata).
 
      b. Locate the **md:AssertionConsumerService** node. 
 
      c. Copy the value of the **Location** attribute. 
+
         <br><br>![Configure App Settings][12]
-     
+
      d. In the **Sign On URL** textbox, past the value you have obtained in the previous step.
 
-     > [AZURE.NOTE] If you are expiriencing issues getting the Reply URL from the metadata file, contact the O.C. Tanner - AppreciateHub support team via [sso@octanner.com](mailto:sso@octanner.com).
-
+   > [!NOTE]
+> If you are expiriencing issues getting the Reply URL from the metadata file, contact the O.C. Tanner - AppreciateHub support team via [sso@octanner.com](mailto:sso@octanner.com).
+> 
+> 
      e. Click **Next**.
- 
+
 4. On the **Configure single sign-on at O.C. Tanner - AppreciateHub** page, click **Download metadata**, and then save the metadata file locally on your computer.<br><br>![What is Azure AD Connect][9]
 
 5. Contact the O.C. Tanner - AppreciateHub support team via xyz, provide them with the metadata file, and them let them know that they should enable SSO for you.
 
-
 6. On the Azure classic portal, select the single sign-on configuration confirmation, and then click **Next**. <br><br>![What is Azure AD Connect][10]
 
 7. On the **Single sign-on confirmation** page, click **Complete**.  <br><br>![What is Azure AD Connect][11]
-
-
 
 
 ### Creating an Azure AD test user
@@ -146,7 +138,7 @@ In the Users list, select **Britta Simon**.<br><br>![Create Azure AD User][20]<b
 2. From the **Directory** list, select the directory for which you want to enable directory integration.
 
 3. To display the list of users, in the menu on the top, click **Users**.<br>![Creating an Azure AD test user](./media/active-directory-saas-oc-tanner-tutorial/create_aaduser_03.png) 
- 
+
 4. To open the **Add User** dialog, in the toolbar on the bottom, click **Add User**. <br>![Creating an Azure AD test user](./media/active-directory-saas-oc-tanner-tutorial/create_aaduser_04.png) 
 
 5. On the **Tell us about this user** dialog page, perform the following steps: <br>![Creating an Azure AD test user](./media/active-directory-saas-oc-tanner-tutorial/create_aaduser_05.png) 
@@ -157,38 +149,34 @@ In the Users list, select **Britta Simon**.<br><br>![Create Azure AD User][20]<b
 
     c. Click **Next**.
 
-6.  On the **User Profile** dialog page, perform the following steps: <br>![Creating an Azure AD test user](./media/active-directory-saas-oc-tanner-tutorial/create_aaduser_06.png)
- 
-    a. In the **First Name** textbox, type **Britta**.  
+6. On the **User Profile** dialog page, perform the following steps: <br>![Creating an Azure AD test user](./media/active-directory-saas-oc-tanner-tutorial/create_aaduser_06.png)
 
-    b. In the **Last Name** textbox, type, **Simon**.
+   a. In the **First Name** textbox, type **Britta**.  
 
-    c. In the **Display Name** textbox, type **Britta Simon**.
+   b. In the **Last Name** textbox, type, **Simon**.
 
-    d. In the **Role** list, select **User**.
-    e. Click **Next**.
+   c. In the **Display Name** textbox, type **Britta Simon**.
+
+   d. In the **Role** list, select **User**.
+e. Click **Next**.
 
 7. On the **Get temporary password** dialog page, click **create**.<br>![Creating an Azure AD test user](./media/active-directory-saas-oc-tanner-tutorial/create_aaduser_07.png) 
- 
+
 8. On the **Get temporary password** dialog page, perform the following steps:<br>![Creating an Azure AD test user](./media/active-directory-saas-oc-tanner-tutorial/create_aaduser_08.png) 
-  
+
     a. Write down the value of the **New Password**.
 
     b. Click **Complete**.   
 
-  
- 
-### Creating a O.C. Tanner - AppreciateHub test user
 
+### Creating a O.C. Tanner - AppreciateHub test user
 The objective of this section is to create a user called Britta Simon in O.C. Tanner - AppreciateHub.
 
 **To create a user called Britta Simon in O.C. Tanner - AppreciateHub, perform the following steps:**
 
 1. Ask your OC Tanner support team to create a user that has as nameID attribute the same value as the user name of Britta Simon in Azure AD.
 
-
 ### Assigning the Azure AD test user
-
 The objective of this section is to enabling Britta Simon to use Azure single sign-on by granting her access to O.C. Tanner - AppreciateHub.
 <br><br>![Assign User][200]
 
@@ -198,28 +186,24 @@ The objective of this section is to enabling Britta Simon to use Azure single si
 <br><br>![Assign User][201]
 2. In the applications list, select **O.C. Tanner - AppreciateHub**.
 <br><br>![Assign User][202]
-1. In the menu on the top, click **Users**.<br>
+3. In the menu on the top, click **Users**.<br>
 <br><br>![Assign User][203]
-1. In the Users list, select **Britta Simon**.
+4. In the Users list, select **Britta Simon**.
 
-2. In the toolbar on the bottom, click **Assign**.
+5. In the toolbar on the bottom, click **Assign**.
 <br><br>![Assign User][205]
 
 
-
 ### Testing Single Sign-On
-
 The objective of this section is to test your Azure AD single sign-on configuration using the Access Panel.<br>
 When you click the O.C. Tanner - AppreciateHub tile in the Access Panel, you should get automatically signed-on to your O.C. Tanner - AppreciateHub application.
 
-
 ## Additional Resources
-
 * [List of Tutorials on How to Integrate SaaS Apps with Azure Active Directory](active-directory-saas-tutorial-list.md)
 * [What is application access and single sign-on with Azure Active Directory?](active-directory-appssoaccess-whatis.md)
 
-
 <!--Image references-->
+
 [1]: ./media/active-directory-saas-oc-tanner-tutorial/tutorial_general_01.png
 [2]: ./media/active-directory-saas-oc-tanner-tutorial/tutorial_general_02.png
 [3]: ./media/active-directory-saas-oc-tanner-tutorial/tutorial_general_03.png

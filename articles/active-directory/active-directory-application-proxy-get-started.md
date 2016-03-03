@@ -1,25 +1,26 @@
-<properties
-	pageTitle="How to provide secure remote access to on-premises apps"
-	description="Covers how to use Azure AD Application Proxy to provide secure remote access to your on-premises apps."
-	services="active-directory"
-	documentationCenter=""
-	authors="kgremban"
-	manager="stevenpo"
-	editor=""/>
+---
+title: How to provide secure remote access to on-premises apps
+description: Covers how to use Azure AD Application Proxy to provide secure remote access to your on-premises apps.
+services: active-directory
+documentationcenter: 
+authors: kgremban
+manager: stevenpo
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="get-started-article"
-	ms.date="02/10/2016"
-	ms.author="kgremban"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: get-started-article
+ms.date: 02/10/2016
+ms.author: kgremban
 
+---
 # How to provide secure remote access to on-premises applications
-
-> [AZURE.NOTE] Application Proxy is a feature that is available only if you upgraded to the Premium or Basic edition of Azure Active Directory. For more information, see [Azure Active Directory editions](active-directory-editions.md).
-
+> [!NOTE]
+> Application Proxy is a feature that is available only if you upgraded to the Premium or Basic edition of Azure Active Directory. For more information, see [Azure Active Directory editions](active-directory-editions.md).
+> 
+> 
 You want to provide access for remote users who have all kinds of devices – managed, and unmanaged; tablets, smartphones, and laptops. But providing secure access to a myriad of resources can be complex. In recent years, reverse proxies were a popular way to provide secure remote access, but they needed to be behind firewalls which were hard to secure and hard to make highly available.
 
 ## Secure remote access in the cloud
@@ -48,18 +49,18 @@ Setting up Application Proxy is accomplished in two steps:
 ## What's next?
 There's a lot more you can do with Application Proxy:
 
-- [Publish applications using your own domain name](active-directory-application-proxy-custom-domains.md)
-- [Enable single-sign on](active-directory-application-proxy-sso-using-kcd.md)
-- [Working with claims aware applications](active-directory-application-proxy-claims-aware-apps.md)
-- [Enable conditional access](active-directory-application-proxy-conditional-access.md)
-
+* [Publish applications using your own domain name](active-directory-application-proxy-custom-domains.md)
+* [Enable single-sign on](active-directory-application-proxy-sso-using-kcd.md)
+* [Working with claims aware applications](active-directory-application-proxy-claims-aware-apps.md)
+* [Enable conditional access](active-directory-application-proxy-conditional-access.md)
 
 ### Learn more about Application Proxy
-- [Take a look at our online help](active-directory-application-proxy-enable.md)
-- [Check out the Application Proxy blog](http://blogs.technet.com/b/applicationproxyblog/)
-- [Watch our videos on Channel 9!](http://channel9.msdn.com/events/Ignite/2015/BRK3864)
+* [Take a look at our online help](active-directory-application-proxy-enable.md)
+* [Check out the Application Proxy blog](http://blogs.technet.com/b/applicationproxyblog/)
+* [Watch our videos on Channel 9!](http://channel9.msdn.com/events/Ignite/2015/BRK3864)
 
 ## Additional resources
-- [Article Index for Application Management in Azure Active Directory](active-directory-apps-index.md)
-- [Sign up for Azure as an organization](sign-up-organization.md)
-- [Azure Identity](fundamentals-identity.md)
+* [Article Index for Application Management in Azure Active Directory](active-directory-apps-index.md)
+* [Sign up for Azure as an organization](sign-up-organization.md)
+* [Azure Identity](fundamentals-identity.md)
+

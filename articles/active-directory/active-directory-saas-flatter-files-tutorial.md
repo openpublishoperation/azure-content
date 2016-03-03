@@ -1,56 +1,51 @@
-<properties
-	pageTitle="Tutorial: Azure Active Directory integration with Flatter Files | Microsoft Azure"
-	description="Learn how to configure single sign-on between Azure Active Directory and Flatter Files."
-	services="active-directory"
-	documentationCenter=""
-	authors="jeevansd"
-	manager="stevenpo"
-	editor=""/>
+---
+title: 'Tutorial: Azure Active Directory integration with Flatter Files | Microsoft Azure'
+description: Learn how to configure single sign-on between Azure Active Directory and Flatter Files.
+services: active-directory
+documentationcenter: 
+authors: jeevansd
+manager: stevenpo
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="article"
-	ms.date="01/26/2016"
-	ms.author="jeedes"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: article
+ms.date: 01/26/2016
+ms.author: jeedes
 
-
+---
 # Tutorial: Azure Active Directory integration with Flatter Files
-
 The objective of this tutorial is to show you how to integrate Flatter Files with Azure Active Directory (Azure AD).<br>Integrating Flatter Files with Azure AD provides you with the following benefits: 
 
-- You can control in Azure AD who has access to Flatter Files 
-- You can enable your users to automatically get signed-on to Flatter Files (Single Sign-On) with their Azure AD accounts
-- You can manage your accounts in one central location - the Azure Active Directory classic portal
+* You can control in Azure AD who has access to Flatter Files 
+* You can enable your users to automatically get signed-on to Flatter Files (Single Sign-On) with their Azure AD accounts
+* You can manage your accounts in one central location - the Azure Active Directory classic portal
 
 If you want to know more details about SaaS app integration with Azure AD, see [What is application access and single sign-on with Azure Active Directory](active-directory-appssoaccess-whatis.md).
 
-## Prerequisites 
-
+## Prerequisites
 To configure Azure AD integration with Flatter Files, you need the following items:
 
-- An Azure AD subscription
-- A Flatter Files single-sign on enabled subscription
+* An Azure AD subscription
+* A Flatter Files single-sign on enabled subscription
 
-
-> [AZURE.NOTE] To test the steps in this tutorial, we do not recommend using a production environment.
-
-
+> [!NOTE]
+> To test the steps in this tutorial, we do not recommend using a production environment.
+> 
+> 
 To test the steps in this tutorial, you should follow these recommendations:
 
-- You should not use your production environment, unless this is necessary.
-- If you don't have an Azure AD trial environment, you can get a one-month trial [here](https://azure.microsoft.com/pricing/free-trial/). 
+* You should not use your production environment, unless this is necessary.
+* If you don't have an Azure AD trial environment, you can get a one-month trial [here](https://azure.microsoft.com/pricing/free-trial/). 
 
- 
 ## Scenario Description
 The objective of this tutorial is to enable you to test Azure AD single sign-on in a test environment. <br>
 The scenario outlined in this tutorial consists of three main building blocks:
 
 1. Adding Flatter Files from the gallery 
 2. Configuring and testing Azure AD single sign-on
-
 
 ## Adding Flatter Files from the gallery
 To configure the integration of Flatter Files into Azure AD, you need to add Flatter Files from the gallery to your list of managed SaaS apps.
@@ -64,6 +59,7 @@ To configure the integration of Flatter Files into Azure AD, you need to add Fla
 
 3. To open the applications view, in the directory view, click **Applications** in the top menu.<br><br>
 ![Applications][2]<br>
+
 4. Click **Add** at the bottom of the page.<br><br>
 ![Applications][3]<br>
 5. On the **What do you want to do** dialog, click **Add an application from the gallery**.<br><br>
@@ -73,27 +69,24 @@ To configure the integration of Flatter Files into Azure AD, you need to add Fla
 7. In the results pane, select **Flatter Files**, and then click **Complete** to add the application.<br><br>
 ![Creating an Azure AD test user](./media/active-directory-saas-flatter-files-tutorial/tutorial_flatter_files_500.png)<br>
 
-##  Configuring and testing Azure AD single sign-on
+## Configuring and testing Azure AD single sign-on
 The objective of this section is to show you how to configure and test Azure AD single sign-on with Flatter Files based on a test user called "Britta Simon".
 
 For single sign-on to work, Azure AD needs to know what the counterpart user in Flatter Files to an user in Azure AD is. In other words, a link relationship between an Azure AD user and the related user in Flatter Files needs to be established.<br>
 This link relationship is established by assigning the value of the **user name** in Azure AD as the value of the **Username** in Flatter Files.
- 
+
 To configure and test Azure AD single sign-on with Flatter Files, you need to complete the following building blocks:
 
-1. **[Configuring Azure AD Single Sign-On](#configuring-azure-ad-single-single-sign-on)** - to enable your users to use this feature.
-2. **[Creating an Azure AD test user](#creating-an-azure-ad-test-user)** - to test Azure AD single sign-on with Britta Simon.
-4. **[Creating a Flatter Files test user](#creating-a-halogen-software-test-user)** - to have a counterpart of Britta Simon in Flatter Files that is linked to the Azure AD representation of her.
-5. **[Assigning the Azure AD test user](#assigning-the-azure-ad-test-user)** - to enable Britta Simon to use Azure AD single sign-on.
-5. **[Testing Single Sign-On](#testing-single-sign-on)** - to verify whether the configuration works.
+1. **[Configuring Azure AD Single Sign-On](#configuring-azure-ad-single-single-sign-on.md)** - to enable your users to use this feature.
+2. **[Creating an Azure AD test user](#creating-an-azure-ad-test-user.md)** - to test Azure AD single sign-on with Britta Simon.
+3. **[Creating a Flatter Files test user](#creating-a-halogen-software-test-user.md)** - to have a counterpart of Britta Simon in Flatter Files that is linked to the Azure AD representation of her.
+4. **[Assigning the Azure AD test user](#assigning-the-azure-ad-test-user.md)** - to enable Britta Simon to use Azure AD single sign-on.
+5. **[Testing Single Sign-On](#testing-single-sign-on.md)** - to verify whether the configuration works.
 
 ### Configuring Azure AD Single Sign-On
-
 The objective of this section is to enable Azure AD single sign-on in the Azure AD classic portal and to configure single sign-on in your Flatter Files application. As part of this procedure, you are required to create a base-64 encoded certificate file. If you are not familiar with this procedure, see [How to convert a binary certificate into a text file](http://youtu.be/PlgrzUZ-Y1o).
 
 To configure single sign-on for Flatter Files, you need a registered domain. If you don't have a registered domain yet, contact your Flatter Files support team via [support@flatterfiles.com](mailto:support@flatterfiles.com).  
-
-
 
 **To configure Azure AD single sign-on with Flatter Files, perform the following steps:**
 
@@ -106,10 +99,11 @@ To configure single sign-on for Flatter Files, you need a registered domain. If 
 3. On the **Configure App Settings** dialog page, click **Next**.
 <br><br>![Configure Single Sign-On](./media/active-directory-saas-flatter-files-tutorial/tutorial_flatter_files_03.png) <br>
 
-    > [AZURE.NOTE] Flatter Files uses the same SSO login URL for all the customers: [https://www.flatterfiles.com/site/login/sso/](https://www.flatterfiles.com/site/login/sso/).
-.
- 
- 
+   > [!NOTE]
+> Flatter Files uses the same SSO login URL for all the customers: [https://www.flatterfiles.com/site/login/sso/](https://www.flatterfiles.com/site/login/sso/).
+> .
+> 
+> 
 4. On the **Configure single sign-on at Flatter Files** page, perform the following steps:
 <br><br>![Configure Single Sign-On](./media/active-directory-saas-flatter-files-tutorial/tutorial_flatter_files_04.png)  <br>
 
@@ -117,47 +111,44 @@ To configure single sign-on for Flatter Files, you need a registered domain. If 
 
     b. Click **Next**.
 
+5. Sign-on to your Flatter Files application as an administrator.
 
-1. Sign-on to your Flatter Files application as an administrator.
-
-2. Click Dashboard. 
+6. Click Dashboard. 
 <br><br>![Configure Single Sign-On](./media/active-directory-saas-flatter-files-tutorial/tutorial_flatter_files_05.png)  <br>
 
-
-
-2. Click **Settings**, and then perform the following steps on the **Company** tab: 
+7. Click **Settings**, and then perform the following steps on the **Company** tab: 
 <br><br>![Configure Single Sign-On](./media/active-directory-saas-flatter-files-tutorial/tutorial_flatter_files_06.png)  <br>
 
     a. Select **Use SAML 2.0 for Authentication**.
 
     b. Click **Configure SAML**.
 
-
-
-2. On the **SAML Configuration** dialog, perform the following steps: 
+8. On the **SAML Configuration** dialog, perform the following steps: 
 <br><br>![Configure Single Sign-On](./media/active-directory-saas-flatter-files-tutorial/tutorial_flatter_files_08.png)  <br>
 
     a. In the Domain textbox, type your registered domain.
 
-    > [AZURE.NOTE] If you don't have a registered domain yet, contact your Flatter Files support team via [support@flatterfiles.com](mailto:support@flatterfiles.com).
-    
+   > [!NOTE]
+> If you don't have a registered domain yet, contact your Flatter Files support team via [support@flatterfiles.com](mailto:support@flatterfiles.com).
+> 
+> 
     b. In the Azure classic portal, on the Configure single sign-on at Flatter Files dialog, copt the Single Sign-On Service URL, and then paste it into the Identity Provider URL textbox.
 
     c.  Create a **base-64 encoded** file from your downloaded certificate.  
 
-    >[AZURE.TIP] For more details, see [How to convert a binary certificate into a text file](http://youtu.be/PlgrzUZ-Y1o)
-
+   > [!TIP]
+> For more details, see [How to convert a binary certificate into a text file](http://youtu.be/PlgrzUZ-Y1o)
+> 
+> 
     d.  Open your base-64 encoded certificate in notepad, copy the content of it into your clipboard, and then paste it to the **FlatterFiles Identity Provider Certificate** textbox.
 
     e. Click **Update**.
 
-6. In the Azure AD classic portal, select the single sign-on configuration confirmation, and then click **Next**. 
+9. In the Azure AD classic portal, select the single sign-on configuration confirmation, and then click **Next**. 
 <br><br>![Azure AD Single Sign-On][10]<br>
 
-7. On the **Single sign-on confirmation** page, click **Complete**.  
-  <br><br>![Azure AD Single Sign-On][11]
-
-
+10. On the **Single sign-on confirmation** page, click **Complete**.  
+<br><br>![Azure AD Single Sign-On][11]
 
 
 ### Creating an Azure AD test user
@@ -173,7 +164,7 @@ In the Users list, select **Britta Simon**.<br><br>![Create Azure AD User][20]<b
 
 3. To display the list of users, in the menu on the top, click **Users**.
 <br><br> ![Creating an Azure AD test user](./media/active-directory-saas-flatter-files-tutorial/create_aaduser_03.png) <br>
- 
+
 4. To open the **Add User** dialog, in the toolbar on the bottom, click **Add User**. 
 <br><br> ![Creating an Azure AD test user](./media/active-directory-saas-flatter-files-tutorial/create_aaduser_04.png) <br>
 
@@ -186,32 +177,30 @@ In the Users list, select **Britta Simon**.<br><br>![Create Azure AD User][20]<b
 
     c. Click **Next**.
 
-6.  On the **User Profile** dialog page, perform the following steps: 
+6. On the **User Profile** dialog page, perform the following steps: 
 <br><br>![Creating an Azure AD test user](./media/active-directory-saas-flatter-files-tutorial/create_aaduser_06.png) <br>
- 
-    a. In the **First Name** textbox, type **Britta**.  
 
-    b. In the **Last Name** textbox, type, **Simon**.
+   a. In the **First Name** textbox, type **Britta**.  
 
-    c. In the **Display Name** textbox, type **Britta Simon**.
+   b. In the **Last Name** textbox, type, **Simon**.
 
-    d. In the **Role** list, select **User**.
-    e. Click **Next**.
+   c. In the **Display Name** textbox, type **Britta Simon**.
+
+   d. In the **Role** list, select **User**.
+e. Click **Next**.
 
 7. On the **Get temporary password** dialog page, click **create**.
 <br><br> ![Creating an Azure AD test user](./media/active-directory-saas-flatter-files-tutorial/create_aaduser_07.png) <br>
- 
+
 8. On the **Get temporary password** dialog page, perform the following steps:
 <br><br>![Creating an Azure AD test user](./media/active-directory-saas-flatter-files-tutorial/create_aaduser_08.png) <br>
-  
+
     a. Write down the value of the **New Password**.
 
     b. Click **Complete**.   
 
-  
- 
-### Creating a Flatter Files test user
 
+### Creating a Flatter Files test user
 The objective of this section is to create a user called Britta Simon in Flatter Files.
 
 **To create a user called Britta Simon in Flatter Files, perform the following steps:**
@@ -236,7 +225,6 @@ The objective of this section is to create a user called Britta Simon in Flatter
 
 
 ### Assigning the Azure AD test user
-
 The objective of this section is to enabling Britta Simon to use Azure single sign-on by granting her access to Flatter Files.
 <br><br>![Assign User][200] <br>
 
@@ -246,26 +234,21 @@ The objective of this section is to enabling Britta Simon to use Azure single si
 <br><br>![Assign User][201] <br>
 2. In the applications list, select **Flatter Files**.
 <br><br>![Assign User](./media/active-directory-saas-flatter-files-tutorial/tutorial_flatter_files_11.png) <br>
-1. In the menu on the top, click **Users**.
+3. In the menu on the top, click **Users**.
 <br><br>![Assign User][203] <br>
-1. In the Users list, select **Britta Simon**.
+4. In the Users list, select **Britta Simon**.
 
-2. In the toolbar on the bottom, click **Assign**.
+5. In the toolbar on the bottom, click **Assign**.
 <br><br>![Assign User][205]
 
 
-
 ### Testing Single Sign-On
-
 The objective of this section is to test your Azure AD single sign-on configuration using the Access Panel.<br>
 When you click the Flatter Files tile in the Access Panel, you should get automatically signed-on to your Flatter Files application.
 
-
 ## Additional Resources
-
 * [List of Tutorials on How to Integrate SaaS Apps with Azure Active Directory](active-directory-saas-tutorial-list.md)
 * [What is application access and single sign-on with Azure Active Directory?](active-directory-appssoaccess-whatis.md)
-
 
 <!--Image references-->
 

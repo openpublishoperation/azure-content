@@ -1,31 +1,25 @@
 
-<properties 
-    pageTitle="Azure AD + Active Directory requirements for Azure RemoteApp | Microsoft Azure" 
-    description="Learn how to set up Active Directory to work with Azure RemoteApp." 
-    services="remoteapp" 
-	documentationCenter="" 
-    authors="lizap" 
-    manager="mbaldwin" />
+---
+title: Azure AD + Active Directory requirements for Azure RemoteApp | Microsoft Azure
+description: Learn how to set up Active Directory to work with Azure RemoteApp.
+services: remoteapp
+documentationcenter: 
+authors: lizap
+manager: mbaldwin
 
-<tags 
-    ms.service="remoteapp" 
-    ms.workload="compute" 
-    ms.tgt_pltfrm="na" 
-    ms.devlang="na" 
-    ms.topic="article" 
-    ms.date="01/07/2016" 
-    ms.author="elizapo" />
+ms.service: remoteapp
+ms.workload: compute
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: article
+ms.date: 01/07/2016
+ms.author: elizapo
 
-
-
+---
 # Azure AD + Active Directory requirements for Azure RemoteApp
-
-
-
 For your Azure RemoteApp hybrid collection or for a cloud collection that you want to federate using AD Connect, you need to do the following.
 
 ### Connect Azure AD and Active Directory
-
 If you want to connect your Azure AD tenant and your on-premises Active Directory environments, use AD Connect. It will take you only [4 clicks](http://blogs.technet.com/b/ad/archive/2014/08/04/connecting-ad-and-azure-ad-only-4-clicks-with-azure-ad-connect.aspx) to connect the two directories.
 
 Note - Directory synchronization is required for hybrid collections.
@@ -40,7 +34,8 @@ For example, if you set up your UPN domain suffix in AAD as contoso.com, but som
 ### Create objects for Azure RemoteApp
 You also need to create the following on-premises Active Directory objects:
 
-- A service account to provide access to domain resources for RemoteApp programs by joining RDSH end points to the on-premises domain.
-- An Organizational Unit (OU) to contain RemoteApp machine objects. Use of the OU is recommended (but not required) to isolate the accounts and policies you will use with RemoteApp.
+* A service account to provide access to domain resources for RemoteApp programs by joining RDSH end points to the on-premises domain.
+* An Organizational Unit (OU) to contain RemoteApp machine objects. Use of the OU is recommended (but not required) to isolate the accounts and policies you will use with RemoteApp.
 
 You need both of these objects when you create your RemoteApp collection, so be sure to do these steps first.
+

@@ -1,22 +1,22 @@
 
-<properties
-	pageTitle="Using Azure AD Connect Health with sync | Microsoft Azure"
-	description="This is the Azure AD Connect Health page that will discuss how to monitor Azure AD Connect sync."
-	services="active-directory"
-	documentationCenter=""
-	authors="billmath"
-	manager="stevenpo"
-	editor="curtand"/>
+---
+title: Using Azure AD Connect Health with sync | Microsoft Azure
+description: This is the Azure AD Connect Health page that will discuss how to monitor Azure AD Connect sync.
+services: active-directory
+documentationcenter: 
+authors: billmath
+manager: stevenpo
+editor: curtand
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="get-started-article"
-	ms.date="02/17/2016"
-	ms.author="billmath"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: get-started-article
+ms.date: 02/17/2016
+ms.author: billmath
 
+---
 # Using Azure AD Connect Health for sync
 The following documentation is specific to monitoring Azure AD Connect sync with Azure AD Connect Health.  For information on monitoring AD FS with Azure AD Connect Health see [Using Azure AD Connect Health with AD FS](active-directory-aadconnect-health-adfs.md).
 
@@ -32,8 +32,8 @@ By selecting an alert you will be provided with additional information as well a
 ## Sync Insight
 With the latest release of Azure AD Connect Health for sync the following new capabilities have been added:
 
-- Latency of sync operations
-- Object Change trend
+* Latency of sync operations
+* Object Change trend
 
 ### Sync Latency
 This feature provides a graphical trend of latency of the sync operations (import, export, etc.) for connectors.  This provides a quick and easy way to understand not only the latency of your operations (great if you have a large set of changes occurring) but also a way to detect anomalies in the latency that may require further investigation.
@@ -48,7 +48,6 @@ This feature provides a graphical trend of the number of changes that are being 
 ![Sync Latency](./media/active-directory-aadconnect-health-sync/syncobjectchanges.png)
 
 ## Related links
-
 * [Azure AD Connect Health](active-directory-aadconnect-health.md)
 * [Azure AD Connect Health Agent Installation](active-directory-aadconnect-health-agent-install.md)
 * [Azure AD Connect Health Operations](active-directory-aadconnect-health-operations.md)

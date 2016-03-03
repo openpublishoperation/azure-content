@@ -1,48 +1,44 @@
-<properties
-	pageTitle="Tutorial: Azure Active Directory integration with Capriza | Microsoft Azure"
-	description="Learn how to configure single sign-on between Azure Active Directory and Capriza."
-	services="active-directory"
-	documentationCenter=""
-	authors="jeevansd"
-	manager="stevenpo"
-	editor=""/>
+---
+title: 'Tutorial: Azure Active Directory integration with Capriza | Microsoft Azure'
+description: Learn how to configure single sign-on between Azure Active Directory and Capriza.
+services: active-directory
+documentationcenter: 
+authors: jeevansd
+manager: stevenpo
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="article"
-	ms.date="12/18/2015"
-	ms.author="jeedes"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: article
+ms.date: 12/18/2015
+ms.author: jeedes
 
-
+---
 # Tutorial: Azure Active Directory integration with Capriza
-
 The objective of this tutorial is to show you how to integrate Capriza with Azure Active Directory (Azure AD).<br>Integrating Capriza with Azure AD provides you with the following benefits:
 
-- You can control in Azure AD who has access to Capriza
-- You can enable your users to automatically get signed-on to Capriza (Single Sign-On) with their Azure AD accounts
-- You can manage your accounts in one central location - the Azure classic portal
+* You can control in Azure AD who has access to Capriza
+* You can enable your users to automatically get signed-on to Capriza (Single Sign-On) with their Azure AD accounts
+* You can manage your accounts in one central location - the Azure classic portal
 
 If you want to know more details about SaaS app integration with Azure AD, see [What is application access and single sign-on with Azure Active Directory](active-directory-appssoaccess-whatis.md).
 
 ## Prerequisites
-
 To configure Azure AD integration with Capriza, you need the following items:
 
-- An Azure AD subscription
-- A Capriza single-sign on enabled subscription
+* An Azure AD subscription
+* A Capriza single-sign on enabled subscription
 
-
-> [AZURE.NOTE] To test the steps in this tutorial, we do not recommend using a production environment.
-
-
+> [!NOTE]
+> To test the steps in this tutorial, we do not recommend using a production environment.
+> 
+> 
 To test the steps in this tutorial, you should follow these recommendations:
 
-- You should not use your production environment, unless this is necessary.
-- If you don't have an Azure AD trial environment, you can get a one-month trial [here](https://azure.microsoft.com/pricing/free-trial/).
-
+* You should not use your production environment, unless this is necessary.
+* If you don't have an Azure AD trial environment, you can get a one-month trial [here](https://azure.microsoft.com/pricing/free-trial/).
 
 ## Scenario Description
 The objective of this tutorial is to enable you to test Azure AD single sign-on in a test environment. <br>
@@ -50,7 +46,6 @@ The scenario outlined in this tutorial consists of two main building blocks:
 
 1. Adding Capriza from the gallery
 2. Configuring and testing Azure AD single sign-on
-
 
 ## Adding Capriza from the gallery
 To configure the integration of Capriza into Azure AD, you need to add Capriza from the gallery to your list of managed SaaS apps.
@@ -64,6 +59,7 @@ To configure the integration of Capriza into Azure AD, you need to add Capriza f
 
 3. To open the applications view, in the directory view, click **Applications** in the top menu.<br><br>
 ![Applications][2]<br>
+
 4. Click **Add** at the bottom of the page.<br><br>
 ![Applications][3]<br>
 5. On the **What do you want to do** dialog, click **Add an application from the gallery**.<br><br>
@@ -74,7 +70,7 @@ To configure the integration of Capriza into Azure AD, you need to add Capriza f
 <br><br>
 ![Creating an Azure AD test user](./media/active-directory-saas-capriza-tutorial/tutorial_capriza_02.png)<br>
 
-##  Configuring and testing Azure AD single sign-on
+## Configuring and testing Azure AD single sign-on
 The objective of this section is to show you how to configure and test Azure AD single sign-on with Capriza based on a test user called "Britta Simon".
 
 For single sign-on to work, Azure AD needs to know what the counterpart user in Capriza to an user in Azure AD is. In other words, a link relationship between an Azure AD user and the related user in Capriza needs to be established.<br>
@@ -82,17 +78,14 @@ This link relationship is established by assigning the value of the **user name*
 
 To configure and test Azure AD single sign-on with Capriza, you need to complete the following building blocks:
 
-1. **[Configuring Azure AD Single Sign-On](#configuring-azure-ad-single-single-sign-on)** - to enable your users to use this feature.
-2. **[Creating an Azure AD test user](#creating-an-azure-ad-test-user)** - to test Azure AD single sign-on with Britta Simon.
-4. **[Creating a Capriza test user](#creating-a-capriza-test-user)** - to have a counterpart of Britta Simon in Capriza that is linked to the Azure AD representation of her.
-5. **[Assigning the Azure AD test user](#assigning-the-azure-ad-test-user)** - to enable Britta Simon to use Azure AD single sign-on.
-5. **[Testing Single Sign-On](#testing-single-sign-on)** - to verify whether the configuration works.
+1. **[Configuring Azure AD Single Sign-On](#configuring-azure-ad-single-single-sign-on.md)** - to enable your users to use this feature.
+2. **[Creating an Azure AD test user](#creating-an-azure-ad-test-user.md)** - to test Azure AD single sign-on with Britta Simon.
+3. **[Creating a Capriza test user](#creating-a-capriza-test-user.md)** - to have a counterpart of Britta Simon in Capriza that is linked to the Azure AD representation of her.
+4. **[Assigning the Azure AD test user](#assigning-the-azure-ad-test-user.md)** - to enable Britta Simon to use Azure AD single sign-on.
+5. **[Testing Single Sign-On](#testing-single-sign-on.md)** - to verify whether the configuration works.
 
 ### Configuring Azure AD Single Sign-On
-
 The objective of this section is to enable Azure AD single sign-on in the Azure classic portal and to configure single sign-on in your Capriza application.
-
-
 
 **To configure Azure AD single sign-on with Capriza, perform the following steps:**
 
@@ -111,24 +104,20 @@ The objective of this section is to enable Azure AD single sign-on in the Azure 
     b. Click **Next**.
 
 
-4. On the **Configure single sign-on at Capriza** page, perform the following steps:
+1. On the **Configure single sign-on at Capriza** page, perform the following steps:
 <br><br>![Configure Single Sign-On](./media/active-directory-saas-capriza-tutorial/tutorial_capriza_05.png) <br>
 
     a. Click **Download certificate**, and then save the file on your computer.
 
     b. Click **Next**.
 
+2. To get SSO configured for your application, contact your Capriza support team via support@capriza.com and attach the downloaded certificate file to your email. Also please do provide the SAML SSO URL, Sign Out URL and Issuer URL so that they can be configured for SSO integration.
 
-5. To get SSO configured for your application, contact your Capriza support team via support@capriza.com and attach the downloaded certificate file to your email. Also please do provide the SAML SSO URL, Sign Out URL and Issuer URL so that they can be configured for SSO integration.
-
-
-6. In the Azure classic portal, select the single sign-on configuration confirmation, and then click **Next**.
+3. In the Azure classic portal, select the single sign-on configuration confirmation, and then click **Next**.
 <br><br>![Azure AD Single Sign-On][10]<br>
 
-7. On the **Single sign-on confirmation** page, click **Complete**.  
-  <br><br>![Azure AD Single Sign-On][11]
-
-
+4. On the **Single sign-on confirmation** page, click **Complete**.  
+<br><br>![Azure AD Single Sign-On][11]
 
 
 ### Creating an Azure AD test user
@@ -157,18 +146,18 @@ In the Users list, select **Britta Simon**.<br><br>![Create Azure AD User][20]<b
 
     c. Click **Next**.
 
-6.  On the **User Profile** dialog page, perform the following steps:
+6. On the **User Profile** dialog page, perform the following steps:
 <br><br>![Creating an Azure AD test user](./media/active-directory-saas-capriza-tutorial/create_aaduser_06.png) <br>
 
-    a. In the **First Name** textbox, type **Britta**.  
+   a. In the **First Name** textbox, type **Britta**.  
 
-    b. In the **Last Name** textbox, type, **Simon**.
+   b. In the **Last Name** textbox, type, **Simon**.
 
-    c. In the **Display Name** textbox, type **Britta Simon**.
+   c. In the **Display Name** textbox, type **Britta Simon**.
 
-    d. In the **Role** list, select **User**.
+   d. In the **Role** list, select **User**.
 
-    e. Click **Next**.
+   e. Click **Next**.
 
 7. On the **Get temporary password** dialog page, click **create**.
 <br><br> ![Creating an Azure AD test user](./media/active-directory-saas-capriza-tutorial/create_aaduser_07.png) <br>
@@ -181,18 +170,16 @@ In the Users list, select **Britta Simon**.<br><br>![Create Azure AD User][20]<b
     b. Click **Complete**.   
 
 
-
 ### Creating a Capriza test user
-
 The objective of this section is to create a user called Britta Simon in Capriza. Capriza supports just-in-time provisioning, which is by default enabled. **Please make sure that your domain name is configured with Capriza for user provisoning. After that only the just-in-time user provisioning will work.**
 
-There is no action item for you in this section. A new user will be created during an attempt to access Capriza if it doesn't exist yet. [Configuring Azure AD Single Sign-On](#configuring-azure-ad-single-single-sign-on).
+There is no action item for you in this section. A new user will be created during an attempt to access Capriza if it doesn't exist yet. [Configuring Azure AD Single Sign-On](#configuring-azure-ad-single-single-sign-on.md).
 
-> [AZURE.NOTE] If you need to create a user manually, you need to contact the Capriza support team.
-
-
+> [!NOTE]
+> If you need to create a user manually, you need to contact the Capriza support team.
+> 
+> 
 ### Assigning the Azure AD test user
-
 The objective of this section is to enabling Britta Simon to use Azure single sign-on by granting her access to Capriza.
 <br><br>![Assign User][200] <br>
 
@@ -204,27 +191,22 @@ The objective of this section is to enabling Britta Simon to use Azure single si
 2. In the applications list, select **Capriza**.
 <br><br>![Configure Single Sign-On](./media/active-directory-saas-capriza-tutorial/tutorial_capriza_50.png) <br>
 
-1. In the menu on the top, click **Users**.
+3. In the menu on the top, click **Users**.
 <br><br>![Assign User][203] <br>
 
-1. In the Users list, select **Britta Simon**.
+4. In the Users list, select **Britta Simon**.
 
-2. In the toolbar on the bottom, click **Assign**.
+5. In the toolbar on the bottom, click **Assign**.
 <br><br>![Assign User][205]
 
 
-
 ### Testing Single Sign-On
-
 The objective of this section is to test your Azure AD single sign-on configuration using the Access Panel.<br>
 When you click the Capriza tile in the Access Panel, you should get automatically signed-on to your Capriza application.
 
-
 ## Additional Resources
-
 * [List of Tutorials on How to Integrate SaaS Apps with Azure Active Directory](active-directory-saas-tutorial-list.md)
 * [What is application access and single sign-on with Azure Active Directory?](active-directory-appssoaccess-whatis.md)
-
 
 <!--Image references-->
 

@@ -1,28 +1,27 @@
-<properties
-	pageTitle="Azure AD Connect Multiple Domains"
-	description="This document describes setting up and configuring multiple top level domains with O365 and Azure AD."
-	services="active-directory"
-	documentationCenter=""
-	authors="billmath"
-	manager="stevenpo"
-	editor="curtand"/>
+---
+title: Azure AD Connect Multiple Domains
+description: This document describes setting up and configuring multiple top level domains with O365 and Azure AD.
+services: active-directory
+documentationcenter: 
+authors: billmath
+manager: stevenpo
+editor: curtand
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="article"
-	ms.date="01/21/2016"
-	ms.author="billmath"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: article
+ms.date: 01/21/2016
+ms.author: billmath
 
-#Multiple Domain Support
-
+---
+# Multiple Domain Support
 Many have asked how you can configure multiple top level Office 365 or Azure AD domains and sub-domains with federation.
 While most of it can be done in a fairly straightforward way, because of some things we do behind the scenes, there are a couple of tips and tricks you should know about to avoid the following issues
 
-- Error messages while trying to configure additional domains for federation
-- Users in subdomains are unable to login after multiple top level domains have been configured for federation
+* Error messages while trying to configure additional domains for federation
+* Users in subdomains are unable to login after multiple top level domains have been configured for federation
 
 ## Multiple top level domains
 I’ll take you through setup of an example organization contoso.com who wants an additional domain named fabrikam.com.
@@ -33,10 +32,10 @@ When I first sign up for Office 365 or Azure AD, I choose to configure contoso.c
 
 Once this is done, let’s look at the default values for two of the new Azure AD domain’s new configuration properties (These can be queried using Get-MsolDomainFederationSettings):
 
-| Property Name | Value | Description|
-| ----- | ----- | -----|
-|IssuerURI | http://fs.contoso100.com/adfs/services/trust| While it looks like a URL, this property is really just a name for the on premises authentication system, and so the path does not need to resolve to anything.  By default, Azure AD sets this to the value of the federation service identifier in my on premises AD FS configuration.
-|PassiveClientSignInUrl|https://fs.contoso100.com/adfs/ls/|This is the location to which passive signin requests will be sent, and it resolves to my actual AD FS system.  Actually there are several “*Url” properties, but we just need to look at one example to illustrate the difference between this property and a URI such as the IssuerURI.
+| Property Name | Value | Description |
+| --- | --- | --- |
+| IssuerURI |http://fs.contoso100.com/adfs/services/trust |While it looks like a URL, this property is really just a name for the on premises authentication system, and so the path does not need to resolve to anything.  By default, Azure AD sets this to the value of the federation service identifier in my on premises AD FS configuration. |
+| PassiveClientSignInUrl |https://fs.contoso100.com/adfs/ls/ |This is the location to which passive signin requests will be sent, and it resolves to my actual AD FS system.  Actually there are several “*Url” properties, but we just need to look at one example to illustrate the difference between this property and a URI such as the IssuerURI. |
 
 Now, imagine I add my second domain fabrikam.com.  Again I can do this by running the Azure AD Connect wizard a second time or via PowerShell.
 
@@ -50,9 +49,9 @@ So, in Powershell, if I add fabrikam.com using the SupportMultipleDomain paramet
 
 I will get the following configuration in Azure AD:
 
-- DomainName: fabrikam.com
-- IssuerURI: http://fabrikam.com/adfs/services/trust
-- PassiveClientSignInUrl: https://fs.contoso100.com/adfs/ls/
+* DomainName: fabrikam.com
+* IssuerURI: http://fabrikam.com/adfs/services/trust
+* PassiveClientSignInUrl: https://fs.contoso100.com/adfs/ls/
 
 Note that while the IssuerURI has been set to a value based on my domain, and therefore unique, the endpoint url values are still configured to point to my federation service on fs.contoso100.com, just like they are for the original contoso.com domain.  So all the domains will still point to the same AD FS system.
 
@@ -75,16 +74,16 @@ See below for all of the detailed steps to transition from single domain to mult
 
 Once we’ve done this, we will then have configuration for two domains in Azure AD:
 
-- DomainName: contoso.com
-- IssuerURI: http://contoso.com/adfs/services/trust
-- PassiveClientSignInUrl: https://fs.contoso100.com/adfs/ls/
-- DomainName: fabrikam.com
-- IssuerURI: http://fabrikam.com/adfs/services/trust
-- PassiveClientSignInUrl: https://fs.contoso100.com/adfs/ls/
+* DomainName: contoso.com
+* IssuerURI: http://contoso.com/adfs/services/trust
+* PassiveClientSignInUrl: https://fs.contoso100.com/adfs/ls/
+* DomainName: fabrikam.com
+* IssuerURI: http://fabrikam.com/adfs/services/trust
+* PassiveClientSignInUrl: https://fs.contoso100.com/adfs/ls/
 
 Federated sign on for users from the contoso.com and the fabrikam.com domains will now be working.  There is only one remaining problem: sign on for users in sub domains.
 
-##Sub domains
+## Sub domains
 Let’s say I add my sub domain sub.contoso.com to Azure AD.  Because of the way Azure AD manages domains, the sub domain will inherit the settings of the parent domain, in this case contoso.com.  This means the IssuerURI for user@sub.contoso.com will need to be http://contoso.com/adfs/services/trust.  However the standard rule implemented above for
 
 Azure AD, will generate a token with an issuer as http://sub.contoso.com/adfs/services/trust, which will not match the domain’s required value and authentication will fail.
@@ -93,3 +92,4 @@ Luckily, we have a workaround for this as well, but it is not as well built in t
 You have to configure the custom claim rule so that it strips off any subdomains from the user’s UPN suffix when constructing the custom Issuer value.  You can find the exact steps to do this in the steps below.
 
 So in summary, you can have multiple domains with disparate names, as well as sub domains, all federated to the same AD FS server, it just takes a few extra steps to ensure the Issuer values are set correctly for all users.
+

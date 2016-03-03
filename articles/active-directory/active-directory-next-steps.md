@@ -1,24 +1,22 @@
-<properties
-	pageTitle="What are the next steps I can take using Azure Active Directory?"
-	description="Advanced tasks such as managing passwords, managing users, managing groups, and conditional access using Azure Active Directory"
-	services="active-directory"
-	documentationCenter=""
-	authors="curtand"
-	manager="stevenpo"
-	editor=""/>
+---
+title: What are the next steps I can take using Azure Active Directory?
+description: Advanced tasks such as managing passwords, managing users, managing groups, and conditional access using Azure Active Directory
+services: active-directory
+documentationcenter: 
+authors: curtand
+manager: stevenpo
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="article"
-	ms.date="01/05/2016"
-	ms.author="curtand"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: article
+ms.date: 01/05/2016
+ms.author: curtand
 
+---
 # What are the next steps I can take using Azure AD?
-
-
 ### Other articles on this topic
 [What is Azure AD?](active-directory-whatis.md)<br>
 [How does it work?](active-directory-works.md)<br>
@@ -38,8 +36,7 @@ Use groups to assign a common set of permissions and rights to many accounts at 
 ## Enforce conditional access policies for registered mobile devices
 Azure AD Device Registration provisions devices with an identity that is used to authenticate the device when the user signs in. The authenticated device, and the attributes of the device, can then be used to enforce conditional access policies for applications that are hosted in the cloud and on-premises. [Learn more about Azure AD Device Registration](active-directory-conditional-access.md).
 
-
 ## Additional Resources
-
 * [Sign up for Azure as an organization](sign-up-organization.md)
 * [Azure Identity](fundamentals-identity.md)
+

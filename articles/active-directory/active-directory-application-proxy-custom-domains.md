@@ -1,28 +1,29 @@
-<properties
-	pageTitle="Working with Custom Domains in Azure AD Application Proxy | Microsoft Azure"
-	description="Covers how work with custom domains in Azure AD Application Proxy."
-	services="active-directory"
-	documentationCenter=""
-	authors="kgremban"
-	manager="StevenPo"
-	editor=""/>
+---
+title: Working with Custom Domains in Azure AD Application Proxy | Microsoft Azure
+description: Covers how work with custom domains in Azure AD Application Proxy.
+services: active-directory
+documentationcenter: 
+authors: kgremban
+manager: StevenPo
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="article"
-	ms.date="02/09/2016"
-	ms.author="kgremban"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: article
+ms.date: 02/09/2016
+ms.author: kgremban
 
+---
 # Working with custom domains in Azure AD Application Proxy
-> [AZURE.NOTE] Application Proxy is a feature that is available only if you upgraded to the Premium or Basic edition of Azure Active Directory. For more information, see [Azure Active Directory editions](active-directory-editions.md).
-
+> [!NOTE]
+> Application Proxy is a feature that is available only if you upgraded to the Premium or Basic edition of Azure Active Directory. For more information, see [Azure Active Directory editions](active-directory-editions.md).
+> 
+> 
 Using a default domain enables you to set the same URL as the internal and external URL for accessing the application so that your users only have one URL to remember to access the app, no matter where they are accessing from. This also lets you create a single shortcut in the Access Panel for the application. If you use the default domain provided by Azure AD Application Proxy, there’s no additional configuration you need to enable your domain. In the event that you use a custom domain, there are a few things you need to do to make sure that Application Proxy recognizes your domain and validates its certificates.
 
 ## Selecting your custom domain
-
 1. Publish your application according to the instructions in [Publish applications with Application Proxy](active-directory-application-proxy-publish.md).
 2. After the application appears in the list of applications, select it and click **Configure**.
 3. Under **External URL**, enter your custom domain.
@@ -30,7 +31,6 @@ Using a default domain enables you to set the same URL as the internal and exter
 5. Make sure to add a DNS record that routes the internal URL to the application that enables you to have the same URL for internal and external access and a single shortcut to the application in the user’s applications list.
 
 ## Frequently asked questions about working with custom domains
-
 Q: Can I select an already-uploaded certificate without uploading it again?  
 A: Previously uploaded certificates are automatically bound to an application, and there is exactly one certificate matching the application’s host name.  
 ...  
@@ -70,21 +70,21 @@ A: Yes, self-signed certificates are allowed. Note that if you’re using a priv
 Q: Is there a place to see all the certificates for my tenant?  
 A: This is not supported in the current version.  
 
-
 ## See also
 There's a lot more you can do with Application Proxy:
 
-- [Publish applications with Application Proxy](active-directory-application-proxy-publish.md)
-- [Enable single-sign on](active-directory-application-proxy-sso-using-kcd.md)
-- [Enable conditional access](active-directory-application-proxy-conditional-access.md)
-- [Working with claims aware applications](active-directory-application-proxy-claims-aware-apps.md)- [Troubleshoot issues you're having with Application Proxy](active-directory-application-proxy-troubleshoot.md)
+* [Publish applications with Application Proxy](active-directory-application-proxy-publish.md)
+* [Enable single-sign on](active-directory-application-proxy-sso-using-kcd.md)
+* [Enable conditional access](active-directory-application-proxy-conditional-access.md)
+* [Working with claims aware applications](active-directory-application-proxy-claims-aware-apps.md)- [Troubleshoot issues you're having with Application Proxy](active-directory-application-proxy-troubleshoot.md)
 
 ## Learn more about Application Proxy
-- [Take a look at our online help](active-directory-application-proxy-enable.md)
-- [Check out the Application Proxy blog](http://blogs.technet.com/b/applicationproxyblog/)
-- [Watch our videos on Channel 9!](http://channel9.msdn.com/events/Ignite/2015/BRK3864)
+* [Take a look at our online help](active-directory-application-proxy-enable.md)
+* [Check out the Application Proxy blog](http://blogs.technet.com/b/applicationproxyblog/)
+* [Watch our videos on Channel 9!](http://channel9.msdn.com/events/Ignite/2015/BRK3864)
 
 ## Additional Resources
-- [Article Index for Application Management in Azure Active Directory](active-directory-apps-index.md)
-- [Sign up for Azure as an organization](sign-up-organization.md)
-- [Azure Identity](fundamentals-identity.md)
+* [Article Index for Application Management in Azure Active Directory](active-directory-apps-index.md)
+* [Sign up for Azure as an organization](sign-up-organization.md)
+* [Azure Identity](fundamentals-identity.md)
+

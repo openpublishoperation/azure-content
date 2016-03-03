@@ -1,37 +1,35 @@
-<properties
-   pageTitle="Azure Privileged Identity Management: How To Configure Security Alerts"
-   description="Learn how to configure security alerts for Azure Privileged Identity Management extension."
-   services="active-directory"
-   documentationCenter=""
-   authors="kgremban"
-   manager="stevenpo"
-   editor=""/>
+---
+title: 'Azure Privileged Identity Management: How To Configure Security Alerts'
+description: Learn how to configure security alerts for Azure Privileged Identity Management extension.
+services: active-directory
+documentationcenter: 
+authors: kgremban
+manager: stevenpo
+editor: 
 
-<tags
-   ms.service="active-directory"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="identity"
-   ms.date="01/21/2016"
-   ms.author="kgremban"/>
+ms.service: active-directory
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: identity
+ms.date: 01/21/2016
+ms.author: kgremban
 
+---
 # Azure Privileged Identity Management: How to configure security alerts
-
 ## Security alerts overview
 Azure Privileged Identity Management (PIM) offers the following alerts which can be configured. Security alerts can be viewed in the Alerts section of the PIM dashboard.
 
 | Alert | Trigger |
-| ------------- | ------------- |
-| **Permanent activation attack suspected** | An administrator activated its temporary role outside of PIM. |
-| **Suspicious activation renewal of privileged roles** | There were too many re-activations of the same role within the time allowed in the settings. |
-| **Suspicious usage of honey token Global administrator user** | The usage of a “honey pot” user was detected.|
-| **Weak authentication is configured for role activation** | There are roles without MFA in the settings. |
-| **Redundant administrators increase your attack surface** | There are temporary administrators that didn’t activate their roles within the number of days in the settings. |
-| **Too many global administrators increase your attack surface** | There are more global administrators than allowed in the settings. |
+| --- | --- |
+| **Permanent activation attack suspected** |An administrator activated its temporary role outside of PIM. |
+| **Suspicious activation renewal of privileged roles** |There were too many re-activations of the same role within the time allowed in the settings. |
+| **Suspicious usage of honey token Global administrator user** |The usage of a “honey pot” user was detected. |
+| **Weak authentication is configured for role activation** |There are roles without MFA in the settings. |
+| **Redundant administrators increase your attack surface** |There are temporary administrators that didn’t activate their roles within the number of days in the settings. |
+| **Too many global administrators increase your attack surface** |There are more global administrators than allowed in the settings. |
 
 ## Configuring Security Alerts
-
 ### Configure the "Suspicious activation of renewal of privileged roles" alert
 1. From the **Activity** section of the dashboard, select **Security alerts**. The **Active security alerts** blade will appear.
 2. Click **Settings**.
@@ -46,7 +44,6 @@ Azure Privileged Identity Management (PIM) offers the following alerts which can
 4. Click **Save**.
 
 ### Configure the "Too many global administrators increase your attack surface" alert
-
 This alert has two settings that may trigger the alert.  The minimum number of Global Administrators will trigger the alert if there are more than the allowed number of administrators.  If the percentage of global administrators in the total amount of types of administrators is higher than the percentage in the settings, the alert will also be triggered.
 
 1. From the **Activity** section of the dashboard, select **Security alerts**.  The **Active security alerts** blade will appear.
@@ -56,5 +53,18 @@ This alert has two settings that may trigger the alert.  The minimum number of G
 5. Click **Save**.
 
 <!--Every topic should have next steps and links to the next logical set of content to keep the customer engaged-->
+
 ## Next steps
-[AZURE.INCLUDE [active-directory-privileged-identity-management-toc](../../includes/active-directory-privileged-identity-management-toc.md)]
+- [Getting Started with Azure Privileged Identity Management](../articles/active-directory/active-directory-privileged-identity-management-getting-started.md)
+- [Roles in Azure PIM](../articles/active-directory/active-directory-privileged-identity-management-roles.md)
+- [The Security Wizard](../articles/active-directory/active-directory-privileged-identity-management-security-wizard.md)
+- [How to Add or Remove a User Role](../articles/active-directory/active-directory-privileged-identity-management-how-to-add-role-to-user.md)
+- [How to Activate or Deactivate a Role](../articles/active-directory/active-directory-privileged-identity-management-how-to-activate-role.md)
+- [How to Change or View the Default Activation Settings for a Role](../articles/active-directory/active-directory-privileged-identity-management-how-to-change-default-settings.md)
+- [How to Configure Security Alerts](../articles/active-directory/active-directory-privileged-identity-management-how-to-configure-security-alerts.md)
+- [How to Start a Security Review](../articles/active-directory/active-directory-privileged-identity-management-how-to-start-security-review.md)
+- [How to Perform a Security Review](../articles/active-directory/active-directory-privileged-identity-management-how-to-perform-security-review.md)
+- [How to Require MFA](../articles/active-directory/active-directory-privileged-identity-management-how-to-require-mfa.md)
+- [How to Use the Audit Log](../articles/active-directory/active-directory-privileged-identity-management-how-to-use-audit-log.md)
+
+

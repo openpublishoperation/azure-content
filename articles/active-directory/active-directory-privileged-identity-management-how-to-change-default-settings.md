@@ -1,23 +1,22 @@
-<properties
-   pageTitle="Azure Privileged Identity Management: How To Change or View the Default Settings for a Role"
-   description="Learn how to change the default settings for privileged identities with the Azure Privileged Identity Management extension."
-   services="active-directory"
-   documentationCenter=""
-   authors="kgremban"
-   manager="stevenpo"
-   editor=""/>
+---
+title: 'Azure Privileged Identity Management: How To Change or View the Default Settings for a Role'
+description: Learn how to change the default settings for privileged identities with the Azure Privileged Identity Management extension.
+services: active-directory
+documentationcenter: 
+authors: kgremban
+manager: stevenpo
+editor: 
 
-<tags
-   ms.service="active-directory"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="identity"
-   ms.date="01/21/2016"
-   ms.author="kgremban"/>
+ms.service: active-directory
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: identity
+ms.date: 01/21/2016
+ms.author: kgremban
 
+---
 # Azure Privileged Identity Management: How to change or view the default activation settings for a role
-
 ## Changing and viewing the default role activation
 1. From the dashboard, click on the role to be configured from the roles table.
 2. Click **Settings**.
@@ -31,5 +30,18 @@
 <!--PLACEHOLDER: Need an explanation of what the temporary Global Administrator setting is for.-->
 
 <!--Every topic should have next steps and links to the next logical set of content to keep the customer engaged-->
+
 ## Next steps
-[AZURE.INCLUDE [active-directory-privileged-identity-management-toc](../../includes/active-directory-privileged-identity-management-toc.md)]
+- [Getting Started with Azure Privileged Identity Management](../articles/active-directory/active-directory-privileged-identity-management-getting-started.md)
+- [Roles in Azure PIM](../articles/active-directory/active-directory-privileged-identity-management-roles.md)
+- [The Security Wizard](../articles/active-directory/active-directory-privileged-identity-management-security-wizard.md)
+- [How to Add or Remove a User Role](../articles/active-directory/active-directory-privileged-identity-management-how-to-add-role-to-user.md)
+- [How to Activate or Deactivate a Role](../articles/active-directory/active-directory-privileged-identity-management-how-to-activate-role.md)
+- [How to Change or View the Default Activation Settings for a Role](../articles/active-directory/active-directory-privileged-identity-management-how-to-change-default-settings.md)
+- [How to Configure Security Alerts](../articles/active-directory/active-directory-privileged-identity-management-how-to-configure-security-alerts.md)
+- [How to Start a Security Review](../articles/active-directory/active-directory-privileged-identity-management-how-to-start-security-review.md)
+- [How to Perform a Security Review](../articles/active-directory/active-directory-privileged-identity-management-how-to-perform-security-review.md)
+- [How to Require MFA](../articles/active-directory/active-directory-privileged-identity-management-how-to-require-mfa.md)
+- [How to Use the Audit Log](../articles/active-directory/active-directory-privileged-identity-management-how-to-use-audit-log.md)
+
+

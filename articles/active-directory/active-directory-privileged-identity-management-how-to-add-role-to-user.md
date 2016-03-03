@@ -1,29 +1,28 @@
-<properties
-   pageTitle="Azure Privileged Identity Management: How To Start Add a Role to a User"
-   description="Learn how to add roles to privileged identities with the Azure Privileged Identity Management extension."
-   services="active-directory"
-   documentationCenter=""
-   authors="kgremban"
-   manager="stevenpo"
-   editor=""/>
+---
+title: 'Azure Privileged Identity Management: How To Start Add a Role to a User'
+description: Learn how to add roles to privileged identities with the Azure Privileged Identity Management extension.
+services: active-directory
+documentationcenter: 
+authors: kgremban
+manager: stevenpo
+editor: 
 
-<tags
-   ms.service="active-directory"
-   ms.devlang="na"
-   ms.topic="article"
-   ms.tgt_pltfrm="na"
-   ms.workload="identity"
-   ms.date="01/21/2016"
-   ms.author="kgremban"/>
+ms.service: active-directory
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: identity
+ms.date: 01/21/2016
+ms.author: kgremban
 
+---
 # Azure Privileged Identity Management: How to add or remove a user role
-
 ## Adding or removing a user role
 There are several ways to navigate to the **Add managed users** blade of the PIM interface. The click sequence for each is listed below:
 
-- Dashboard > Users in Admin Roles > Add or Remove
-- Dashboard > Role Summary > All Users List > Add or Remove
-- Dashboard > click on user role in role table (for example Global Administrator) > Add or Remove
+* Dashboard > Users in Admin Roles > Add or Remove
+* Dashboard > Role Summary > All Users List > Add or Remove
+* Dashboard > click on user role in role table (for example Global Administrator) > Add or Remove
 
 ## Add a user to a role
 Once you have navigated to the **Add managed users** blade:
@@ -43,5 +42,18 @@ Once you have navigated to the **Add managed users** blade:
 4. Click **Yes** to remove the role from the user.
 
 <!--Every topic should have next steps and links to the next logical set of content to keep the customer engaged-->
+
 ## Next steps
-[AZURE.INCLUDE [active-directory-privileged-identity-management-toc](../../includes/active-directory-privileged-identity-management-toc.md)]
+- [Getting Started with Azure Privileged Identity Management](../articles/active-directory/active-directory-privileged-identity-management-getting-started.md)
+- [Roles in Azure PIM](../articles/active-directory/active-directory-privileged-identity-management-roles.md)
+- [The Security Wizard](../articles/active-directory/active-directory-privileged-identity-management-security-wizard.md)
+- [How to Add or Remove a User Role](../articles/active-directory/active-directory-privileged-identity-management-how-to-add-role-to-user.md)
+- [How to Activate or Deactivate a Role](../articles/active-directory/active-directory-privileged-identity-management-how-to-activate-role.md)
+- [How to Change or View the Default Activation Settings for a Role](../articles/active-directory/active-directory-privileged-identity-management-how-to-change-default-settings.md)
+- [How to Configure Security Alerts](../articles/active-directory/active-directory-privileged-identity-management-how-to-configure-security-alerts.md)
+- [How to Start a Security Review](../articles/active-directory/active-directory-privileged-identity-management-how-to-start-security-review.md)
+- [How to Perform a Security Review](../articles/active-directory/active-directory-privileged-identity-management-how-to-perform-security-review.md)
+- [How to Require MFA](../articles/active-directory/active-directory-privileged-identity-management-how-to-require-mfa.md)
+- [How to Use the Audit Log](../articles/active-directory/active-directory-privileged-identity-management-how-to-use-audit-log.md)
+
+

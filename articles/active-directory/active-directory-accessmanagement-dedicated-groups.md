@@ -1,24 +1,22 @@
-<properties
-	pageTitle="Dedicated groups in Azure Active Directory | Microsoft Azure"
-	description="Overview of how dedicated groups work in Azure Active Directory and how they are created."
-	services="active-directory"
-	documentationCenter=""
-	authors="curtand"
-	manager="stevenpo"
-	editor=""
-	/>
+---
+title: Dedicated groups in Azure Active Directory | Microsoft Azure
+description: Overview of how dedicated groups work in Azure Active Directory and how they are created.
+services: active-directory
+documentationcenter: 
+authors: curtand
+manager: stevenpo
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.workload="identity"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="article"
-	ms.date="02/09/2016"
-	ms.author="curtand"/>
+ms.service: active-directory
+ms.workload: identity
+ms.tgt_pltfrm: na
+ms.devlang: na
+ms.topic: article
+ms.date: 02/09/2016
+ms.author: curtand
 
+---
 # Dedicated groups in Azure Active Directory
-
 In Azure Active Directory, dedicated groups are created automatically and group membership for the dedicated groups is also automatic. You cannot add or remove members to and from dedicated groups through the Azure portal, Windows PowerShell cmdlets, or programmatically. To enable dedicated groups, In the Azure portal, on the Configure tab, set the **Enable Dedicated Groups switch to Yes**.
 
 Once the Enable Dedicated Groups switch is set to **Yes**, you can further enable the directory to automatically create the All Users dedicated group by setting the **Enable “All Users” Group** switch to **Yes**. You can then also edit the name of this dedicated group by typing it in the **Display Name for “All Users” Group** field.
@@ -37,10 +35,10 @@ This article explains more about how to create a rule to manage members on a gro
 
 * [Creating a simple rule to configure dynamic memberships for a group](active-directory-accessmanagement-simplerulegroup.md)
 
-
 These articles provide additional information on Azure Active Directory.
 
 * [Managing access to resources with Azure Active Directory groups](active-directory-manage-groups.md)
 * [Article Index for Application Management in Azure Active Directory](active-directory-apps-index.md)
 * [What is Azure Active Directory?](active-directory-whatis.md)
 * [Integrating your on-premises identities with Azure Active Directory](active-directory-aadconnect.md)
+

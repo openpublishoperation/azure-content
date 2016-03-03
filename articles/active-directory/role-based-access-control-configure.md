@@ -1,23 +1,22 @@
-<properties
-	pageTitle="Azure Active Directory AD Role-based Access Control | Microsoft Azure"
-	description="This article describes Azure role-based access control."
-	services="active-directory"
-	documentationCenter=""
-	authors="kgremban"
-	manager="stevenpo"
-	editor=""/>
+---
+title: Azure Active Directory AD Role-based Access Control | Microsoft Azure
+description: This article describes Azure role-based access control.
+services: active-directory
+documentationcenter: 
+authors: kgremban
+manager: stevenpo
+editor: 
 
-<tags
-	ms.service="active-directory"
-	ms.devlang="na"
-	ms.topic="get-started-article"
-	ms.tgt_pltfrm="na"
-	ms.workload="identity"
-	ms.date="02/10/2016"
-	ms.author="kgremban"/>
+ms.service: active-directory
+ms.devlang: na
+ms.topic: get-started-article
+ms.tgt_pltfrm: na
+ms.workload: identity
+ms.date: 02/10/2016
+ms.author: kgremban
 
+---
 # Azure Role-Based Access Control
-
 ## Role-Based Access Control
 Azure Role-Based Access Control (RBAC) enables fine-grained access management for Azure. Using RBAC, you can segregate duties within your DevOps team and grant only the amount of access to users that they need to perform their jobs.
 
@@ -52,9 +51,10 @@ Select access settings in the essentials section of the **Resource group** blade
 
 ![Users blade - inherited vs assigned access - screenshot](./media/role-based-access-control-configure/view-access.png)
 
-> [AZURE.NOTE] Classic subscription admins and co-admins are in effect owners of the subscription in the new RBAC model.
-
-
+> [!NOTE]
+> Classic subscription admins and co-admins are in effect owners of the subscription in the new RBAC model.
+> 
+> 
 ### Add Access
 1. Click the **Add** icon on the **Users** blade. ![Add access blade - select a role - screenshot](./media/role-based-access-control-configure/grant-access1.png)
 2. Select the role that you wish to assign.
@@ -69,34 +69,37 @@ Select access settings in the essentials section of the **Resource group** blade
 
 ![Users blade - remove from role - screenshot](./media/role-based-access-control-configure/remove-access1.png)
 
-
-> [AZURE.NOTE] Inherited assignments can not be removed from child scopes. Navigate to the parent scope and remove such assignments.
-
+> [!NOTE]
+> Inherited assignments can not be removed from child scopes. Navigate to the parent scope and remove such assignments.
+> 
+> 
 ![Users blade - inherited access disables remove button - screenshot](./media/role-based-access-control-configure/remove-access2.png)
 
 ## Manage access using Azure PowerShell
 Access can be managed used Azure RBAC commands in the Azure PowerShell tools.
 
--	Use `Get-AzureRmRoleDefinition` to list RBAC roles available for assignment and to inspect the operations to which they grant access.
+* Use `Get-AzureRmRoleDefinition` to list RBAC roles available for assignment and to inspect the operations to which they grant access.
 
--	Use `Get-AzureRmRoleAssignment` to list RBAC access assignments effective at the specified subscription, resource group, or resource. Use the `ExpandPrincipalGroups` parameter to list access assignments to the specified user as well as to the groups of which the user is member. Use the `IncludeClassicAdministrators` parameter to also list classic Subscription Administrator and Co-Administrators.
+* Use `Get-AzureRmRoleAssignment` to list RBAC access assignments effective at the specified subscription, resource group, or resource. Use the `ExpandPrincipalGroups` parameter to list access assignments to the specified user as well as to the groups of which the user is member. Use the `IncludeClassicAdministrators` parameter to also list classic Subscription Administrator and Co-Administrators.
 
--	Use `New-AzureRmRoleAssignment` to grant access to users, groups, and applications.
+* Use `New-AzureRmRoleAssignment` to grant access to users, groups, and applications.
 
--	Use `Remove-AzureRmRoleAssignment` to remove access.
+* Use `Remove-AzureRmRoleAssignment` to remove access.
+
 
 See [Manage access using Azure PowerShell](role-based-access-control-manage-access-powershell.md) for more detailed examples of managing access using Azure PowerShell.
 
 ## Manage access using the Azure Command-Line Interface
 Access can be managed used Azure RBAC commands in the Azure Command-Line Interface.
 
--	Use `azure role list` to list RBAC roles available for assignment. Use `azure role show` to inspect the operations to which they grant access.
+* Use `azure role list` to list RBAC roles available for assignment. Use `azure role show` to inspect the operations to which they grant access.
 
--	Use `azure role assignment list` to list RBAC access assignments effective at the specified subscription, resource group, or resource. Use the `expandPrincipalGroups` option to list access assignments to the specified user as well as to the groups of which the user is member. Use the  `includeClassicAdministrators` parameter to also list classic Subscription Administrator and Co-Administrators.
+* Use `azure role assignment list` to list RBAC access assignments effective at the specified subscription, resource group, or resource. Use the `expandPrincipalGroups` option to list access assignments to the specified user as well as to the groups of which the user is member. Use the  `includeClassicAdministrators` parameter to also list classic Subscription Administrator and Co-Administrators.
 
--	Use `azure role assignment create` to grant access to users, groups, and applications.
+* Use `azure role assignment create` to grant access to users, groups, and applications.
 
--	Use `azure role assignment delete` to remove access.
+* Use `azure role assignment delete` to remove access.
+
 
 See [Manage access using the Azure CLI](role-based-access-control-manage-access-azure-cli.md) for more detailed examples of managing access using the Azure CLI.
 
@@ -116,8 +119,10 @@ To create a report of who granted/revoked what kind of access to/from whom on wh
 
     `azure authorization changelog`
 
-> [AZURE.NOTE] Access changes can be queried for the past 90 days (in 15 day batches).
-
+> [!NOTE]
+> Access changes can be queried for the past 90 days (in 15 day batches).
+> 
+> 
 The following lists all access changes in the subscription for the past 7 days.
 
 ![PowerShell Get-AzureRMAuthorizationChangeLog - screenshot](./media/role-based-access-control-configure/access-change-history.png)
@@ -163,10 +168,10 @@ Following is an example custom role definition that allows monitoring and restar
 ### Actions
 The actions property of a custom role specifies the Azure operations to which the role grants access. It is a collection of operation strings that identify securable operations of Azure resource providers. Operation strings that contain wildcards (\*) grant access to all operations that match the operation string. For instance:
 
--	`*/read` grants access to read operations for all resource types of all Azure resource providers.
--	`Microsoft.Network/*/read` grants access to read operations for all resource types in the Microsoft.Network resource provider of Azure.
--	`Microsoft.Compute/virtualMachines/*` grants access to all operations of virtual machines and its child resource types.
--	`Microsoft.Web/sites/restart/Action` grants access to restart websites.
+* `*/read` grants access to read operations for all resource types of all Azure resource providers.
+* `Microsoft.Network/*/read` grants access to read operations for all resource types in the Microsoft.Network resource provider of Azure.
+* `Microsoft.Compute/virtualMachines/*` grants access to all operations of virtual machines and its child resource types.
+* `Microsoft.Web/sites/restart/Action` grants access to restart websites.
 
 Use the `Get-AzureRmProviderOperation` or `azure provider operations show` commands to list operations of Azure resource providers. You may also use these commands to verify that an operation string is valid, and to expand wildcard operation strings.
 
@@ -177,18 +182,22 @@ Use the `Get-AzureRmProviderOperation` or `azure provider operations show` comma
 ### Not Actions
 If the set of operations that you wish to allow is easily expressed by excluding specific operations rather than including all operations except the ones you wish to exclude, then use the **NotActions** property of a custom role. The effective access granted by a custom role is computed by excluding the **NotActions** operations from the **Actions** operations.
 
-> [AZURE.NOTE] If a user is assigned a role that excludes an operation in **NotActions** and is assigned a second role that grants access to the same operation – the user will be allowed to perform that operation. **NotActions** is not a deny rule – it is simply a convenient way to create a set of allowed operations when specific operations need to be excluded.
-
+> [!NOTE]
+> If a user is assigned a role that excludes an operation in **NotActions** and is assigned a second role that grants access to the same operation – the user will be allowed to perform that operation. **NotActions** is not a deny rule – it is simply a convenient way to create a set of allowed operations when specific operations need to be excluded.
+> 
+> 
 ### AssignableScopes
 The **AssignableScopes** property of the custom role specifies the scopes (subscriptions, resource groups, or resources) within which the custom role is available for assignment to users, groups, and applications. Using **AssignableScopes** you can make the custom role available for assignment in only the subscriptions or resource groups that require it, and not clutter user experience for the rest of the subscriptions or resource groups.
 
-> [AZURE.NOTE] You must use at least one subscription, resource group, or resource ID.  
-
+> [!NOTE]
+> You must use at least one subscription, resource group, or resource ID.  
+> 
+> 
 **AssignableScopes** of a custom role also controls who is allowed to view, update, and delete the role. Following are some valid assignable scopes:
 
--	“/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e”, “/subscriptions/e91d47c4-76f3-4271-a796-21b4ecfe3624”: makes the role available for assignment in two subscriptions.
--	“/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e”: makes the role available for assignment in a single subscription.
--	“/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e/resourceGroups/Network”: makes the role available for assignment only in the Network resource group.
+* “/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e”, “/subscriptions/e91d47c4-76f3-4271-a796-21b4ecfe3624”: makes the role available for assignment in two subscriptions.
+* “/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e”: makes the role available for assignment in a single subscription.
+* “/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e/resourceGroups/Network”: makes the role available for assignment only in the Network resource group.
 
 ### Custom Roles Access Control
 The **AssignableScopes** property of the custom role dictates who can view, modify, and delete the role.
@@ -201,3 +210,4 @@ The **AssignableScopes** property of the custom role dictates who can view, modi
 
 **Who can view custom roles that are available for assignment at a scope?**
 -Users who can perform the `Microsoft.Authorization/roleDefinition/read` operation at a scope can view the RBAC roles that are available for assignment at that scope. All built-in roles in Azure RBAC allow viewing of roles that are available for assignment.
+
